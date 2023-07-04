@@ -1,0 +1,94 @@
+#header {
+  --colorAccentBg: #31363b;
+  --colorTabBar: var(--colorAccentBg);
+}
+
+input[type=text]:not(#urlFieldInput) {
+  height: 29.5px;
+  border-radius: 2px;
+  border: 1px solid #5F6265 !important;
+  background-color: #1B1E20 !important;
+  transition: border 0.1s;
+}
+input[type=text]:not(#urlFieldInput):focus-within, input[type=text]:not(#urlFieldInput):hover {
+  outline: 0px !important;
+  border-color: var(--colorHighlightBg) !important;
+}
+
+#header {
+  --colorAccentBg: #31363b;
+  --colorTabBar: var(--colorAccentBg);
+}
+
+.mainbar .toolbar-mainbar {
+  height: 50px;
+}
+.mainbar .toolbar-mainbar .UrlBar-AddressField {
+  height: 29.5px;
+  border-radius: 2px;
+  border: 1px solid #5F6265 !important;
+  background-color: #1B1E20 !important;
+  transition: border 0.1s;
+}
+.mainbar .toolbar-mainbar .UrlBar-AddressField:focus-within, .mainbar .toolbar-mainbar .UrlBar-AddressField:hover {
+  outline: 0px !important;
+  border-color: var(--colorHighlightBg) !important;
+}
+.mainbar .toolbar-mainbar .UrlBar-AddressField .BookmarkButton {
+  border: 0px;
+}
+.mainbar .toolbar-mainbar .UrlBar-AddressField .BookmarkButton #addBookmarkPath path {
+  fill: var(--colorFg) !important;
+}
+:not(.mainbar .toolbar-mainbar .UrlBar-AddressField .BookmarkButton #addBookmarkPath).bookmark-animated-fill {
+  fill: var(--colorFg) !important;
+}
+:not(.mainbar .toolbar-mainbar .UrlBar-AddressField .BookmarkButton #addBookmarkPath).bookmark-outline {
+  fill: var(--colorFg) !important;
+}
+:not(.mainbar .toolbar-mainbar .UrlBar-AddressField .BookmarkButton #addBookmarkPath).add-bookmark-shadow {
+  fill: none !important;
+}
+.mainbar .toolbar-mainbar .UrlBar-AddressField .drop-down-menu > button > svg path {
+  fill-rule: evenodd;
+  d: path("M8 11.707l-6-6L2.707 5 8 10.293 13.293 5l.707.707-6 6z");
+}
+.mainbar .toolbar-mainbar .UrlBar-AddressField .dialog-content {
+  background-color: var(--colorBg);
+}
+
+/*Only for toolbar buttons*/
+.button-toolbar button {
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+  border-radius: 3px !important;
+  transition: border 0.1s;
+}
+
+/*For all buttons*/
+.button-toolbar button:hover, .button-toolbar.button-show-setting button:hover, input[type=button]:not(.circular):hover, .privacy-btn-icon:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-radius: 3px !important;
+}
+
+.button-toolbar button:active, .button-toolbar.button-show-setting button:active, input[type=button]:not(.circular):active, .privacy-btn-icon:active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  border-radius: 3px !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  transition: background-color 0.1s;
+}
+
+.button-toolbar button:active:hover, .button-toolbar.button-show-setting button:active:hover, input[type=button]:not(.circular):active:hover, .privacy-btn-icon:active:hover {
+  background-color: #355D75 !important;
+}
+
+button[name=PanelBookmarks], button[name=PanelHistory], button[name=PanelNotes] {
+  padding-right: 5px;
+}
+
+.button-addressfield.SiteInfoButton.internal svg path {
+  transform: matrix(0.75, 0, 0, 0.75, -0.25, -0.25);
+  d: path("M 9,3 C 5.6759952,3 3,5.6759952 3,9 C 3,12.324005 5.6759952,15 9,15 C 10.481205,15 11.830584,14.465318 12.875,13.582031 L 18.292969,19 L 19,18.292969 L 13.582031,12.875 C 14.465318,11.830584 15,10.481205 15,9 C 15,5.6759952 12.324005,3 9,3 Z M 9,4 C 11.770005,4 14,6.2299952 14,9 C 14,11.770005 11.770005,14 9,14 C 6.2299952,14 4,11.770005 4,9 C 4,6.2299952 6.2299952,4 9,4 Z");
+}
+
+/*# sourceMappingURL=mainbar.css.map */

@@ -1,0 +1,77 @@
+#header {
+  --colorAccentBg: #31363b;
+  --colorTabBar: var(--colorAccentBg);
+}
+
+#tabs-container.top {
+  border-bottom: 1px solid #5F6265;
+}
+
+.tab-strip span .tab.active {
+  border-radius: 3px 3px 0 0 !important;
+  border-top: 3.5px solid var(--colorHighlightBg);
+  border-right: 1px solid #5F6265;
+  border-left: 1px solid #5F6265;
+  margin: 0 -2px -1px -2px;
+  background-color: var(--colorBg) !important;
+}
+.tab-strip span .tab:not(.active) {
+  border-radius: 0 0 0 0 !important;
+  border-top: 0px solid var(--colorAccentBorderDark);
+  border-right: 0px solid var(--colorAccentBorderDark);
+  border-left: 0px solid var(--colorAccentBorderDark);
+  margin: 0px 0px 0px 0px;
+  background-color: #23262A !important;
+  transition: background-color 0.15s;
+}
+.tab-strip span .tab:not(.active):hover {
+  border-bottom: 0.6px solid #587180;
+  border-color: #587180;
+  background-color: #2E4857 !important;
+  outline-color: #2E4857;
+}
+.tab-strip span .tab .stack-counter {
+  background-color: var(--colorBg) !important;
+  border-radius: 10px !important;
+  font-size: 8px !important;
+  color: #4460da !important;
+  padding-top: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  height: 12px;
+  min-width: 12px;
+}
+.tab-strip span:first-child .tab:not(.active) {
+  border-radius: 3px 0px 0px 0px !important;
+}
+.tab-strip span:nth-last-child(2) .tab:not(.active) {
+  border-radius: 0px 3px 0px 0px !important;
+}
+
+.close {
+  border-radius: 10px;
+  background-color: #898B8C;
+  fill: var(--colorBg) !important;
+}
+.close:hover {
+  background-color: #823943;
+}
+.close:hover:active {
+  background-color: #A53D49;
+}
+.close:active {
+  background-color: #823943;
+}
+.close svg path {
+  d: path("M 4.6253,12.21839 8,8.84369 l 3.3747,3.3747 h 0.84369 V 11.3747 L 8.84369,8 12.21839,4.6253 V 3.78161 H 11.3747 L 8,7.15631 4.6253,3.78161 H 3.78161 V 4.6253 L 7.15631,8 3.78161,11.3747 v 0.84369 z");
+}
+
+.newtab {
+  margin: 3.5px 0px 0px 2px;
+}
+.newtab button svg path {
+  transform: matrix(1.0666667, 0, 0, 1.0666667, 2.7999999, 1.7333332);
+  d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
+}
+
+/*# sourceMappingURL=tabs.css.map */

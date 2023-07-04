@@ -1,0 +1,96 @@
+@import "./variables";
+
+#tabs-container.top {
+  border-bottom: 1.0px solid $colorGeneralBdr;
+}
+
+.tab-strip {
+    span {
+        .tab {
+            &.active {
+                border-radius: 3px 3px 0 0 !important;
+                border-top:    3.5px solid $colorHighlightBdr;
+                border-right:  1.0px solid $colorGeneralBdr;
+                border-left:   1.0px solid $colorGeneralBdr;
+                margin: 0 -2px -1px -2px;
+                background-color: var(--colorBg) !important;
+            }
+            &:not(.active) {
+                border-radius: 0 0 0 0 !important;
+                border-top:    0px solid var(--colorAccentBorderDark);
+                border-right:  0px solid var(--colorAccentBorderDark);
+                border-left:   0px solid var(--colorAccentBorderDark);
+                margin: 0px 0px 0px 0px;
+                background-color: $colorInactiveTabBg !important;
+                transition: background-color 0.15s;
+
+                &:hover {
+                    border-bottom: 0.6px solid $colorInactiveTabHvrBg;
+                    border-color: $colorInactiveTabHvrBg;
+                    background-color: $colorInactiveTabHvrBdr !important;
+                    outline-color: $colorInactiveTabHvrBdr;
+                }
+            }
+            .stack-counter {
+                background-color: var(--colorBg) !important;
+                border-radius: 10px !important;
+                font-size: 8px !important;
+                color: $colorStackCounter !important;
+                padding-top: 2px;
+                padding-left: 1px;
+                padding-right: 1px;
+                height: 12px;
+                min-width: 12px;
+            }
+        }
+        &:first-child {
+            .tab {
+                &:not(.active) {
+                    border-radius: 3px 0px 0px 0px !important;
+                }
+            }
+        }
+        &:nth-last-child(2) {
+            .tab {
+                &:not(.active) {
+                    border-radius: 0px 3px 0px 0px !important;
+                }
+            }
+        }
+    }
+}
+
+.close {
+    border-radius: 10px;
+    background-color: $colorCloseBtnBg;
+    fill: var(--colorBg) !important;
+
+    &:hover {
+        background-color: $colorCloseBtnActiveBg;
+        &:active {
+            background-color: $colorCloseBtnActiveHvrBg;
+        }
+    }
+    &:active {
+        background-color: $colorCloseBtnActiveBg;
+    }
+
+    svg {
+        path {
+            d: path("M 4.6253,12.21839 8,8.84369 l 3.3747,3.3747 h 0.84369 V 11.3747 L 8.84369,8 12.21839,4.6253 V 3.78161 H 11.3747 L 8,7.15631 4.6253,3.78161 H 3.78161 V 4.6253 L 7.15631,8 3.78161,11.3747 v 0.84369 z");
+        }
+    }
+}
+
+.newtab {
+    margin: 3.5px 0px 0px 2px;
+
+    button {
+        svg{
+            path {
+                transform: matrix(1.0666667,0,0,1.0666667,2.7999999,1.7333332);
+                d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
+            }
+        }
+    }
+}
