@@ -1,0 +1,474 @@
+#header {
+  --colorAccentBg: #31363b;
+  --colorTabBar: var(--colorAccentBg);
+}
+
+input[type=text]:not(#urlFieldInput) {
+  height: 29.5px;
+  border-radius: 2px;
+  border: 1px solid #5F6265 !important;
+  background-color: #1B1E20 !important;
+  transition: border 0.1s;
+}
+input[type=text]:not(#urlFieldInput):focus-within, input[type=text]:not(#urlFieldInput):hover {
+  outline: 0px !important;
+  border-color: var(--colorHighlightBg) !important;
+}
+
+#header {
+  --colorAccentBg: #31363b;
+  --colorTabBar: var(--colorAccentBg);
+} /*
+ A: In order to have window shade you also need to:
+      1. setup a kwin window rule to setting "Window class"="vivaldi-stable" and "No titlebar and frame"="Force No"
+      2. setup a Windows specifi override in Breeze theme (click on the pen icon over in the corner of the preview)
+          setting "Window class"=vivaldi-stable and select "No border"
+ B: To get rounded corners for the Vivaldi window when using window shade, use "KDE-Rounded-Corners" by matinlotfali: https://github.com/matinlotfali/KDE-Rounded-Corners
+*/
+.window-buttongroup .window-minimize {
+  border-radius: 10px;
+  border-width: 2px;
+  width: 18px !important;
+  height: 18px !important;
+  padding: 0 0 0 0;
+  border-color: var(--colorAccentIntense);
+  background-color: var(--colorAccentIntense) !important;
+  margin-right: 6px !important;
+}
+.window-buttongroup .window-minimize:hover {
+  border-color: var(--colorBg);
+  background-color: var(--colorFg) !important;
+  fill: var(--colorWindowBg) !important;
+}
+.window-buttongroup .window-minimize:active {
+  background-color: #6C6F73 !important;
+  fill: var(--colorWindowBg) !important;
+}
+.window-buttongroup .window-minimize svg path {
+  d: path("M 0.5,3.1  5.0,7.6  9.50,3.1  10.5,3.5  5.0,9  -0.5,3.5 Z");
+}
+.window-buttongroup button.window-maximize {
+  border-radius: 10px;
+  border-width: 2px;
+  width: 18px !important;
+  height: 18px !important;
+  padding: 0 0 0 0;
+  border-color: var(--colorAccentIntense);
+  background-color: var(--colorAccentIntense) !important;
+  padding: 1px 0px 0 0px !important;
+  /* leave a little space before the close button */
+  margin: 0px 4px 0px 0px !important;
+}
+.window-buttongroup button.window-maximize:hover {
+  border-color: var(--colorBg);
+  background-color: var(--colorFg) !important;
+  fill: var(--colorWindowBg) !important;
+}
+.window-buttongroup button.window-maximize:active {
+  background-color: #6C6F73 !important;
+  fill: var(--colorWindowBg) !important;
+}
+.window-buttongroup button.window-maximize svg .window-maximize-glyph path {
+  d: path("M 0.5,8 5,3.5 9.5,8 11,8 5,2 -1,8 Z");
+}
+.window-buttongroup button.window-maximize svg .window-restore-glyph path {
+  d: path("M 1,5 5,1 9,5 10.5,5 5,-0.5 -0.5,5 1,5 5,9 9,5 10.5,5 5,10.5 -0.5,5 Z");
+}
+.window-buttongroup .window-close {
+  border-radius: 10px;
+  border-width: 2px;
+  width: 18px !important;
+  height: 18px !important;
+  padding: 0 0 0 0;
+  border-color: var(--colorBg) !important;
+  background-color: #DA4453 !important;
+  fill: var(--colorWindowBg) !important;
+  margin-right: 0.37px !important;
+}
+.window-buttongroup .window-close:hover {
+  background-color: #FF98A2 !important;
+}
+.window-buttongroup .window-close:active {
+  background-color: #6D2229 !important;
+}
+.window-buttongroup .window-close svg path {
+  d: path("M9.5,1.2 l-0.7,-0.7 L5,4.3 L1.2,0.5 l-0.7,0.7 L4.3,5 L0.5,8.8 l0.7,0.7 L5,5.7 l3.8,3.8 l0.7,-0.7 L5.7,5");
+}
+
+#header {
+  --colorAccentBg: #31363b;
+  --colorTabBar: var(--colorAccentBg);
+}
+
+#tabs-container.top {
+  border-bottom: 1px solid #5F6265;
+}
+
+.tab-strip span .tab.active {
+  border-radius: 3px 3px 0 0 !important;
+  border-top: 3.5px solid var(--colorHighlightBg);
+  border-right: 1px solid #5F6265;
+  border-left: 1px solid #5F6265;
+  margin: 0 -2px -1px -2px;
+  background-color: var(--colorBg) !important;
+}
+.tab-strip span .tab:not(.active) {
+  border-radius: 0 0 0 0 !important;
+  border-top: 0px solid var(--colorAccentBorderDark);
+  border-right: 0px solid var(--colorAccentBorderDark);
+  border-left: 0px solid var(--colorAccentBorderDark);
+  margin: 0px 0px 0px 0px;
+  background-color: #23262A !important;
+  transition: background-color 0.15s;
+}
+.tab-strip span .tab:not(.active):hover {
+  border-bottom: 0.6px solid #587180;
+  border-color: #587180;
+  background-color: #2E4857 !important;
+  outline-color: #2E4857;
+}
+.tab-strip span .tab .stack-counter {
+  background-color: var(--colorBg) !important;
+  border-radius: 10px !important;
+  font-size: 8px !important;
+  color: #4460da !important;
+  padding-top: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  height: 12px;
+  min-width: 12px;
+}
+.tab-strip span:first-child .tab:not(.active) {
+  border-radius: 3px 0px 0px 0px !important;
+}
+.tab-strip span:nth-last-child(2) .tab:not(.active) {
+  border-radius: 0px 3px 0px 0px !important;
+}
+
+.close {
+  border-radius: 10px;
+  background-color: #898B8C;
+  fill: var(--colorBg) !important;
+}
+.close:hover {
+  background-color: #823943;
+}
+.close:hover:active {
+  background-color: #A53D49;
+}
+.close:active {
+  background-color: #823943;
+}
+.close svg path {
+  d: path("M 4.6253,12.21839 8,8.84369 l 3.3747,3.3747 h 0.84369 V 11.3747 L 8.84369,8 12.21839,4.6253 V 3.78161 H 11.3747 L 8,7.15631 4.6253,3.78161 H 3.78161 V 4.6253 L 7.15631,8 3.78161,11.3747 v 0.84369 z");
+}
+
+.newtab {
+  margin: 3.5px 0px 0px 2px;
+}
+.newtab button svg path {
+  transform: matrix(1.0666667, 0, 0, 1.0666667, 2.7999999, 1.7333332);
+  d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
+}
+
+#header {
+  --colorAccentBg: #31363b;
+  --colorTabBar: var(--colorAccentBg);
+}
+
+.mainbar .toolbar-mainbar {
+  height: 50px;
+}
+.mainbar .toolbar-mainbar .UrlBar-AddressField {
+  height: 29.5px;
+  border-radius: 2px;
+  border: 1px solid #5F6265 !important;
+  background-color: #1B1E20 !important;
+  transition: border 0.1s;
+}
+.mainbar .toolbar-mainbar .UrlBar-AddressField:focus-within, .mainbar .toolbar-mainbar .UrlBar-AddressField:hover {
+  outline: 0px !important;
+  border-color: var(--colorHighlightBg) !important;
+}
+.mainbar .toolbar-mainbar .UrlBar-AddressField .BookmarkButton {
+  border: 0px;
+}
+.mainbar .toolbar-mainbar .UrlBar-AddressField .BookmarkButton #addBookmarkPath path {
+  fill: var(--colorFg) !important;
+}
+:not(.mainbar .toolbar-mainbar .UrlBar-AddressField .BookmarkButton #addBookmarkPath).bookmark-animated-fill {
+  fill: var(--colorFg) !important;
+}
+:not(.mainbar .toolbar-mainbar .UrlBar-AddressField .BookmarkButton #addBookmarkPath).bookmark-outline {
+  fill: var(--colorFg) !important;
+}
+:not(.mainbar .toolbar-mainbar .UrlBar-AddressField .BookmarkButton #addBookmarkPath).add-bookmark-shadow {
+  fill: none !important;
+}
+.mainbar .toolbar-mainbar .UrlBar-AddressField .drop-down-menu > button > svg path {
+  fill-rule: evenodd;
+  d: path("M8 11.707l-6-6L2.707 5 8 10.293 13.293 5l.707.707-6 6z");
+}
+.mainbar .toolbar-mainbar .UrlBar-AddressField .dialog-content {
+  background-color: var(--colorBg);
+}
+
+/*Only for toolbar buttons*/
+.button-toolbar button {
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+  border-radius: 3px !important;
+  transition: border 0.1s;
+}
+
+/*For all buttons*/
+.button-toolbar button:hover, .button-toolbar.button-show-setting button:hover, input[type=button]:not(.circular):hover, .privacy-btn-icon:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-radius: 3px !important;
+}
+
+.button-toolbar button:active, .button-toolbar.button-show-setting button:active, input[type=button]:not(.circular):active, .privacy-btn-icon:active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  border-radius: 3px !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  transition: background-color 0.1s;
+}
+
+.button-toolbar button:active:hover, .button-toolbar.button-show-setting button:active:hover, input[type=button]:not(.circular):active:hover, .privacy-btn-icon:active:hover {
+  background-color: #355D75 !important;
+}
+
+button[name=PanelBookmarks], button[name=PanelHistory], button[name=PanelNotes] {
+  padding-right: 5px;
+}
+
+.button-addressfield.SiteInfoButton.internal svg path {
+  transform: matrix(0.75, 0, 0, 0.75, -0.25, -0.25);
+  d: path("M 9,3 C 5.6759952,3 3,5.6759952 3,9 C 3,12.324005 5.6759952,15 9,15 C 10.481205,15 11.830584,14.465318 12.875,13.582031 L 18.292969,19 L 19,18.292969 L 13.582031,12.875 C 14.465318,11.830584 15,10.481205 15,9 C 15,5.6759952 12.324005,3 9,3 Z M 9,4 C 11.770005,4 14,6.2299952 14,9 C 14,11.770005 11.770005,14 9,14 C 6.2299952,14 4,11.770005 4,9 C 4,6.2299952 6.2299952,4 9,4 Z");
+}
+
+#header {
+  --colorAccentBg: #31363b;
+  --colorTabBar: var(--colorAccentBg);
+}
+
+.button-startpage.add-set svg path {
+  d: path("M 7.2727258,0 V 7.262919 H 0 V 8.71436 H 7.2727258 V 16 H 8.72727 V 8.71436 H 16 V 7.262919 H 8.72727 V 0 Z");
+}
+
+.circular.update-thumbnail svg path {
+  d: path("m 14,8 c 0,1.1088173 -0.319333,2.140071 -0.84375,3.03125 l -2.6875,-2.6875 L 11.1875,7.625 l 1.625,1.625 c 0.05109,-0.19534 0.09772,-0.3898623 0.125,-0.59375 C 12.945289,8.6038437 12.962684,8.5529713 12.96875,8.5 C 12.98582,8.3319146 13,8.172589 13,8 C 13,5.238576 10.761424,3 8,3 C 7.756976,3 7.5144918,3.02845 7.28125,3.0625 C 7.1450007,3.082455 7.0074468,3.094286 6.875,3.125 C 6.5884185,3.19195 6.327376,3.291647 6.0625,3.40625 C 6.031825,3.419522 5.999101,3.423626 5.96875,3.4375 c -0.09166,0.040961 -0.163333,0.108255 -0.25,0.15625 c -0.008,0.00445 -0.02305,-0.00433 -0.03125,0 l -0.71875,-0.75 C 5.859929,2.319333 6.891182,2 8,2 c 3.313709,0 6,2.686293 6,6 z m -2.96875,5.15625 C 10.140071,13.680667 9.108818,14 8,14 C 4.686291,14 2,11.313707 2,8 C 2,6.8911827 2.319333,5.859929 2.84375,4.96875 l 0.75,0.75 L 5.5,7.65625 L 4.8125,8.34375 L 3.1875,6.75 C 3.13641,6.94534 3.08978,7.1398623 3.0625,7.34375 C 3.0547,7.396156 3.03732,7.4470287 3.03125,7.5 C 3.01418,7.6680854 3,7.827411 3,8 C 3,8.172589 3.01418,8.3319146 3.03125,8.5 C 3.04832,8.6680853 3.060448,8.837256 3.09375,9 C 3.559981,11.278415 5.583754,13 8,13 c 0.2482626,0 0.4801862,-0.02756 0.71875,-0.0625 C 8.8549993,12.91755 8.9925532,12.90571 9.125,12.875 c 0.2865815,-0.06695 0.547624,-0.166647 0.8125,-0.28125 c 0.030718,-0.01299 0.063349,-0.01766 0.09375,-0.03125 c 0.08886,-0.04062 0.164735,-0.108612 0.25,-0.15625 h 0.03125 z");
+}
+.circular.update-thumbnail .set-custom-thumbnail path {
+  transform: matrix(0.8, 0, 0, 0.8, -0.4, -1.2);
+  d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
+}
+
+button.close.circular svg path {
+  fill: var(--colorFg);
+  transform: matrix(1.6666667, 0, 0, 1.6666667, -5.3333335, -5.3333335);
+  d: path("M 5.7070312,5 L 5,5.7070312 L 7.2929688,8 L 5,10.292969 L 5.7070312,11 L 8,8.7070312 L 10.292969,11 L 11,10.292969 L 8.7070312,8 L 11,5.7070312 L 10.292969,5 L 8,7.2929688 Z");
+}
+
+.SpeedDialView-Settings-Button path, .button-toolbar.button-show-setting path {
+  d: path("M 10.666667,0 C 9.424024,0 8.379283,0.849734 8.083332,2 H 0 V 3.3333333 H 8.083332 C 8.379283,4.4835993 9.424024,5.3333333 10.666667,5.3333333 C 11.909302,5.3333333 12.954056,4.4835993 13.249994,3.3333333 H 16 V 2 H 13.249994 C 12.954056,0.849734 11.909302,0 10.666667,0 Z M 4,9.333336 C 2.7573591,9.333336 1.7126172,10.183062 1.4166667,11.333333 H 0 V 12.666667 H 1.4166667 C 1.7126172,13.816938 2.7573591,14.666667 4,14.666667 C 5.2426409,14.666667 6.2873828,13.816938 6.5833333,12.666667 H 6.6666667 H 9.333334 H 16 V 11.333333 H 9.333334 H 6.6666667 H 6.5833333 C 6.2873828,10.183062 5.2426409,9.333336 4,9.333336 Z M 4,10.666667 C 4.7363733,10.666667 5.3333333,11.263627 5.3333333,12 C 5.3333333,12.736373 4.7363733,13.333333 4,13.333333 C 3.2636267,13.333333 2.6666667,12.736373 2.6666667,12 C 2.6666667,11.263627 3.2636267,10.666667 4,10.666667 Z");
+}
+
+.button-toolbar.button-show-setting button, input[type=button]:not(.circular), .privacy-btn-icon {
+  border: 1px solid #6E7175 !important;
+  background-image: none !important;
+  background-color: var(--colorWindowBg) !important;
+}
+
+.Switch-Button {
+  border: 1px solid #797B7D !important;
+  transition: border 0.1s !important;
+}
+.Switch-Buttonhover {
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+
+.Switch-Input {
+  border: 1px solid #6E7175 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  transition: border 0.1s !important;
+}
+.Switch-Input:checked {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: #346E8E !important;
+}
+
+input[type=checkbox] {
+  background-image: none !important;
+  background-color: #1B1E20 !important;
+  border: 1px solid #6E7175 !important;
+  transition: border 0.1s !important;
+}
+input[type=checkbox]:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  transition-duration: 5ms !important;
+}
+input[type=checkbox]:active {
+  filter: none !important;
+}
+input[type=checkbox]:checked {
+  background-color: #2D546B !important;
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+input[type=checkbox]:checked:before {
+  background-color: var(--colorFg) !important;
+  transform: rotate(-45deg) translateY(42%) translateX(-28%) scaleX(0.15) scaleY(0.35) !important;
+}
+input[type=checkbox]:checked:after {
+  background-color: var(--colorFg) !important;
+  transform: rotate(225deg) translateY(-28%) translateX(-90%) scaleX(0.16) scaleY(0.72) !important;
+  transition-duration: 5ms !important;
+}
+
+input[type=radio] {
+  background-image: none !important;
+  background-color: #1B1E20 !important;
+  border: 1px solid #5F6265 !important;
+}
+input[type=radio]:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+input[type=radio]:active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+input[type=radio]:checked, input[type=radio]:checked:active {
+  background-color: var(--colorFg) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, inset 0 0 0 4px #355D75 !important;
+  transition: none !important;
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+
+input[type=search] {
+  height: 29.5px;
+  border-radius: 2px;
+  border: 1px solid #5F6265 !important;
+  background-color: #1B1E20 !important;
+  transition: border 0.1s;
+}
+input[type=search]:focus-within, input[type=search]:hover {
+  outline: 0px !important;
+  border-color: var(--colorHighlightBg) !important;
+}
+
+select {
+  border: 1px solid #6E7175 !important;
+  background-color: var(--colorWindowBg) !important;
+  height: 29.5px !important;
+}
+select:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+select:active, select:focus-visible {
+  outline: 0px !important;
+  background-color: #355D75 !important;
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+select:not([multiple]):not([size]), select input[type=date] {
+  background-image: url("whitearrow.png");
+  background-size: 15.2px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+input[type=date] {
+  background-image: url("whitearrow.png");
+  background-size: 15.2px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+input[type=range] {
+  background-color: #346E8E;
+  border: 1px solid var(--colorHighlightBg);
+  height: 5px;
+}
+
+.vivaldi-settings .settings-sidebar {
+  box-shadow: none;
+  border-right: 0.9px solid var(--colorBorderSubtle);
+}
+.vivaldi-settings .settings-sidebar .settings-navigation-header {
+  border-bottom: 0.9px solid var(--colorBorderSubtle);
+}
+.vivaldi-settings .settings-sidebar .ReactVirtualized__Grid.ReactVirtualized__List {
+  background-color: #1B1E20;
+}
+.vivaldi-settings .settings-sidebar .ReactVirtualized__Grid.ReactVirtualized__List .button-category {
+  margin: 0px;
+  border-radius: 0px;
+}
+.vivaldi-settings .settings-sidebar .ReactVirtualized__Grid.ReactVirtualized__List .button-category.category-selected {
+  background-color: var(--colorHighlightBg);
+}
+.vivaldi-settings .settings-sidebar .ReactVirtualized__Grid.ReactVirtualized__List .button-category.spacer {
+  border-top: 0.9px solid var(--colorBorderSubtle);
+}
+.vivaldi-settings .settings-content {
+  background-color: var(--colorBg) !important;
+}
+.vivaldi-settings .settings-content .tree-row.folder .expand-icon svg path {
+  d: path("M 7.5,4.9730007 L 3.0270617,9.446 L 2.5,8.9189402 L 6.445881,4.9730007 L 2.5,1.0270688 L 3.0270617,0.5 Z");
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+  border: 1px solid #797B7D !important;
+  background-color: #424546 !important;
+}
+.theme-dark ::-webkit-scrollbar-thumb:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: #2D546B !important;
+  transition: background-color 0.9s !important;
+}
+
+@media not (prefers-contrast: more) {
+  ::-webkit-scrollbar {
+    width: 7.7px;
+    transition: background-color 0.9s !important;
+  }
+}
+::-webkit-scrollbar-track {
+  margin: 5.5px;
+  transition: background-color 0.9s !important;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: #313436 !important;
+  border: 1px solid #595C5D;
+  border-radius: calc(var(--scrollbarWidth) / 2);
+}
+
+#browser #webpage-stack nav.startpage-navigation {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+}
+#browser #webpage-stack nav.startpage-navigation .startpage-navigation-group:last-of-type {
+  border-left-width: 0;
+}
+#browser #webpage-stack .dial {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(10px);
+  transition: all 100ms ease;
+  border: 2px solid transparent;
+}
+#browser #webpage-stack .dial:hover {
+  margin-top: 0;
+  border: 2px solid var(--colorHighlightBg);
+  box-shadow: 0px 0px 6px 1px var(--colorHighlightBg);
+}
+#browser.theme-dark #webpage-stack nav.startpage-navigation {
+  background-color: rgba(42, 46, 50, 0.75);
+  color: #fff;
+}
+#browser.theme-dark #webpage-stack .dial {
+  background-color: rgba(42, 46, 50, 0.75) !important;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/*# sourceMappingURL=breeze.css.map */
