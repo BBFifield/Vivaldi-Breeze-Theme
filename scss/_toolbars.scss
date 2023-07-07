@@ -1,0 +1,128 @@
+@import "variables";
+
+.mainbar {
+    .toolbar-mainbar {
+        height: 50px;
+
+        .UrlBar-AddressField{
+            @include search-field;
+
+            .BookmarkButton {
+                border: 0px;
+                #addBookmarkPath {
+                    path {
+                        fill: var(--colorFg) !important;
+                    }
+                    :not(&).bookmark-animated-fill {
+                        fill: var(--colorFg) !important;
+                    }
+                    :not(&).bookmark-outline {
+                        fill: var(--colorFg) !important;
+                    }
+                    :not(&).add-bookmark-shadow {
+                        fill: none !important;
+                    }
+                }
+            }
+
+            .drop-down-menu > button > svg path {
+                fill-rule: evenodd;
+                d: path("M8 11.707l-6-6L2.707 5 8 10.293 13.293 5l.707.707-6 6z");
+            }
+
+            .dialog-content {
+                background-color: var(--colorBg);
+            }
+        }
+    }
+}
+
+
+.ToolbarButton-Button {
+    border: 1.0px solid rgba(0,0,0,0.0) !important;
+    border-radius: 3px !important;
+    &.button-pressed, &.button-pressed:hover {
+        border: 1.0px solid $colorHighlightBdr !important;
+        background-color: $colorBtnActiveHvrBg !important;
+    }
+}
+.button-show-setting .ToolbarButton-Button, input[type=button]:not(.circular), .privacy-btn-icon {
+    border: 1.0px solid $colorInputBtnBdr !important;
+    background-color: var(--colorWindowBg) !important;
+}
+.button-toolbar button, input[type=button]:not(.circular), .privacy-btn-icon {
+    @include button;
+}
+
+
+button[name=PanelBookmarks], button[name=PanelHistory], button[name=PanelNotes] {
+   padding-right: 5px;
+}
+
+.OmniDropdown {
+    border-radius: 2px;
+    border: 1.0px solid $colorGeneralBdr;
+    background-color: $colorInputBg;
+    transition: border 0.15s;
+    padding: 0px;
+    &:hover {
+        border: 1px solid $colorHighlightBdr;
+    }
+
+    .Omni-Dropdown-Label, .omni-clickable {
+        --item-height: 29px;
+        border-radius: 0px;
+        &:hover {
+            &:not(.OmniLinkItem--Highlighted) {
+                background-color: #243B48;
+            }
+            .OmniLinkItem-EraseButton {
+                @include inner-close-button;
+
+                svg {
+                    path {
+                        d: path("M 4.6253,12.21839 8,8.84369 l 3.3747,3.3747 h 0.84369 V 11.3747 L 8.84369,8 12.21839,4.6253 V 3.78161 H 11.3747 L 8,7.15631 4.6253,3.78161 H 3.78161 V 4.6253 L 7.15631,8 3.78161,11.3747 v 0.84369 z");
+                    }
+                }
+            }
+        }
+    }
+    .OmniLinkItem--Highlighted {
+        .OmniLinkItem-EraseButton {
+            svg {
+                path {
+                    d: path("m 0 0");
+                }
+            }
+        }
+    }
+}
+
+.button-addressfield.SiteInfoButton.internal svg path {
+   transform: matrix(0.75,0,0,0.75,-0.25,-0.25);
+   d: path("M 9,3 C 5.6759952,3 3,5.6759952 3,9 C 3,12.324005 5.6759952,15 9,15 C 10.481205,15 11.830584,14.465318 12.875,13.582031 L 18.292969,19 L 19,18.292969 L 13.582031,12.875 C 14.465318,11.830584 15,10.481205 15,9 C 15,5.6759952 12.324005,3 9,3 Z M 9,4 C 11.770005,4 14,6.2299952 14,9 C 14,11.770005 11.770005,14 9,14 C 6.2299952,14 4,11.770005 4,9 C 4,6.2299952 6.2299952,4 9,4 Z");
+}
+
+.sortselector-compact {
+    margin-bottom: 13px !important;
+    height: 30px;
+    padding-right: 0px;
+    .sortselector-area {
+        height: 30px;
+    }
+    .sortselector-button {
+        padding: 14px 18px !important;
+    }
+}
+
+
+footer {
+    height: 35px !important;
+    .toolbar-statusbar {
+        height: 33px !important;
+    }
+    &:after {
+        bottom: 34px !important;
+    }
+
+}

@@ -1,0 +1,50 @@
+@import "variables";
+
+@mixin search-field {
+    height: 29.5px;
+    border-radius: 2px;
+    border: 1.0px solid $colorGeneralBdr !important;
+    background-color: $colorInputBg !important;
+    transition: border 0.1s;
+
+    &:focus-within, &:hover {
+        outline: 0px !important;
+        border-color: $colorHighlightBdr !important;
+    }
+}
+
+
+@mixin inner-close-button {
+    border-radius: 10px;
+    background-color: $colorCloseBtnBg;
+    fill: var(--colorBg) !important;
+
+    &:hover {
+        background-color: $colorCloseBtnActiveBg;
+        &:active {
+            background-color: $colorCloseBtnActiveHvrBg;
+        }
+    }
+    &:active {
+        background-color: $colorCloseBtnActiveBg;
+    }
+}
+
+@mixin button {
+    background-image: none !important;
+    transition: border 0.1s;
+    &:hover {
+        border: 1.0px solid $colorHighlightBdr !important;
+        border-radius: 3px !important;
+        background-color: rgba(0,0,0,0.0) !important;
+    }
+    &:active {
+        border: 1.0px solid $colorHighlightBdr !important;
+        border-radius: 3px !important;
+        background-color: rgba(0,0,0,0.0) !important;
+        transition: background-color 0.1s;
+        &:hover {
+            background-color: $colorBtnActiveHvrBg !important;
+        }
+    }
+}

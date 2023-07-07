@@ -1,5 +1,5 @@
-@use "searchField" as *;
+@use "mixins" as *;
 @import "window_buttons";
 @import "tabs";
-@import "mainbar";
+@import "toolbars";
 @import "inner";

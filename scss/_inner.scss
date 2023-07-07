@@ -1,6 +1,5 @@
 @import "./variables";
 
-
 .button-startpage.add-set {
     svg {
         path {
@@ -9,13 +8,15 @@
     }
 }
 
-.circular.update-thumbnail {
-    svg {
-        path {
-            d: path("m 14,8 c 0,1.1088173 -0.319333,2.140071 -0.84375,3.03125 l -2.6875,-2.6875 L 11.1875,7.625 l 1.625,1.625 c 0.05109,-0.19534 0.09772,-0.3898623 0.125,-0.59375 C 12.945289,8.6038437 12.962684,8.5529713 12.96875,8.5 C 12.98582,8.3319146 13,8.172589 13,8 C 13,5.238576 10.761424,3 8,3 C 7.756976,3 7.5144918,3.02845 7.28125,3.0625 C 7.1450007,3.082455 7.0074468,3.094286 6.875,3.125 C 6.5884185,3.19195 6.327376,3.291647 6.0625,3.40625 C 6.031825,3.419522 5.999101,3.423626 5.96875,3.4375 c -0.09166,0.040961 -0.163333,0.108255 -0.25,0.15625 c -0.008,0.00445 -0.02305,-0.00433 -0.03125,0 l -0.71875,-0.75 C 5.859929,2.319333 6.891182,2 8,2 c 3.313709,0 6,2.686293 6,6 z m -2.96875,5.15625 C 10.140071,13.680667 9.108818,14 8,14 C 4.686291,14 2,11.313707 2,8 C 2,6.8911827 2.319333,5.859929 2.84375,4.96875 l 0.75,0.75 L 5.5,7.65625 L 4.8125,8.34375 L 3.1875,6.75 C 3.13641,6.94534 3.08978,7.1398623 3.0625,7.34375 C 3.0547,7.396156 3.03732,7.4470287 3.03125,7.5 C 3.01418,7.6680854 3,7.827411 3,8 C 3,8.172589 3.01418,8.3319146 3.03125,8.5 C 3.04832,8.6680853 3.060448,8.837256 3.09375,9 C 3.559981,11.278415 5.583754,13 8,13 c 0.2482626,0 0.4801862,-0.02756 0.71875,-0.0625 C 8.8549993,12.91755 8.9925532,12.90571 9.125,12.875 c 0.2865815,-0.06695 0.547624,-0.166647 0.8125,-0.28125 c 0.030718,-0.01299 0.063349,-0.01766 0.09375,-0.03125 c 0.08886,-0.04062 0.164735,-0.108612 0.25,-0.15625 h 0.03125 z");
+.circular {
+    &.update-thumbnail {
+        svg {
+            path {
+                d: path("m 14,8 c 0,1.1088173 -0.319333,2.140071 -0.84375,3.03125 l -2.6875,-2.6875 L 11.1875,7.625 l 1.625,1.625 c 0.05109,-0.19534 0.09772,-0.3898623 0.125,-0.59375 C 12.945289,8.6038437 12.962684,8.5529713 12.96875,8.5 C 12.98582,8.3319146 13,8.172589 13,8 C 13,5.238576 10.761424,3 8,3 C 7.756976,3 7.5144918,3.02845 7.28125,3.0625 C 7.1450007,3.082455 7.0074468,3.094286 6.875,3.125 C 6.5884185,3.19195 6.327376,3.291647 6.0625,3.40625 C 6.031825,3.419522 5.999101,3.423626 5.96875,3.4375 c -0.09166,0.040961 -0.163333,0.108255 -0.25,0.15625 c -0.008,0.00445 -0.02305,-0.00433 -0.03125,0 l -0.71875,-0.75 C 5.859929,2.319333 6.891182,2 8,2 c 3.313709,0 6,2.686293 6,6 z m -2.96875,5.15625 C 10.140071,13.680667 9.108818,14 8,14 C 4.686291,14 2,11.313707 2,8 C 2,6.8911827 2.319333,5.859929 2.84375,4.96875 l 0.75,0.75 L 5.5,7.65625 L 4.8125,8.34375 L 3.1875,6.75 C 3.13641,6.94534 3.08978,7.1398623 3.0625,7.34375 C 3.0547,7.396156 3.03732,7.4470287 3.03125,7.5 C 3.01418,7.6680854 3,7.827411 3,8 C 3,8.172589 3.01418,8.3319146 3.03125,8.5 C 3.04832,8.6680853 3.060448,8.837256 3.09375,9 C 3.559981,11.278415 5.583754,13 8,13 c 0.2482626,0 0.4801862,-0.02756 0.71875,-0.0625 C 8.8549993,12.91755 8.9925532,12.90571 9.125,12.875 c 0.2865815,-0.06695 0.547624,-0.166647 0.8125,-0.28125 c 0.030718,-0.01299 0.063349,-0.01766 0.09375,-0.03125 c 0.08886,-0.04062 0.164735,-0.108612 0.25,-0.15625 h 0.03125 z");
+            }
         }
     }
-    .set-custom-thumbnail path {
+    &.set-custom-thumbnail path {
         transform: matrix(0.8,0,0,0.8,-0.4,-1.2);
         d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
     }
@@ -33,17 +34,12 @@ button.close.circular svg path {
     d: path("M 10.666667,0 C 9.424024,0 8.379283,0.849734 8.083332,2 H 0 V 3.3333333 H 8.083332 C 8.379283,4.4835993 9.424024,5.3333333 10.666667,5.3333333 C 11.909302,5.3333333 12.954056,4.4835993 13.249994,3.3333333 H 16 V 2 H 13.249994 C 12.954056,0.849734 11.909302,0 10.666667,0 Z M 4,9.333336 C 2.7573591,9.333336 1.7126172,10.183062 1.4166667,11.333333 H 0 V 12.666667 H 1.4166667 C 1.7126172,13.816938 2.7573591,14.666667 4,14.666667 C 5.2426409,14.666667 6.2873828,13.816938 6.5833333,12.666667 H 6.6666667 H 9.333334 H 16 V 11.333333 H 9.333334 H 6.6666667 H 6.5833333 C 6.2873828,10.183062 5.2426409,9.333336 4,9.333336 Z M 4,10.666667 C 4.7363733,10.666667 5.3333333,11.263627 5.3333333,12 C 5.3333333,12.736373 4.7363733,13.333333 4,13.333333 C 3.2636267,13.333333 2.6666667,12.736373 2.6666667,12 C 2.6666667,11.263627 3.2636267,10.666667 4,10.666667 Z");
 }
 
-.button-toolbar.button-show-setting button, input[type=button]:not(.circular), .privacy-btn-icon {
-    border: 1.0px solid $colorInputBtnBdr !important;
-    background-image: none !important;
-    background-color: var(--colorWindowBg) !important;
-}
 
 .Switch-Button {
     border: 1.0px solid $colorScrollBarBdr !important;
     transition: border 0.1s !important;
 
-    &hover {
+    &:hover {
         border: 1.0px solid $colorHighlightBdr !important;
     }
 
@@ -66,7 +62,6 @@ input[type=checkbox] {
     background-color: $colorInputBg !important;
     border: 1.0px solid $colorInputBtnBdr !important;
     transition: border 0.1s !important;
-
     &:hover {
         border: 1.0px solid $colorHighlightBdr !important;
         transition-duration: 5ms !important;
@@ -110,8 +105,8 @@ input[type=radio] {
     }
 }
 
-input[type=search] {
-   @include search-field;
+input[type=search], input[type=text]:not(#urlFieldInput) {
+    @include search-field;
 }
 
 
@@ -144,10 +139,26 @@ input[type=date] {
     background-position: right center;
 }
 
-input[type=range] {
+input[type="range" i] {
     background-color: $colorRangeBdrSwitchOnBg;
     border: 1.0px solid $colorHighlightBdr;
-    height: 5px;
+    border-radius: 12px;
+    height: 6px;
+
+    &:disabled {
+        border-color: #1F485E;
+        background-color: #243B48;
+        opacity: 1;
+    }
+    &::-webkit-slider-thumb {
+        border: 1.0px solid #7E8083;
+        height: 18px;
+        width: 18px;
+        transition: border-color 0.15s;
+        &:hover, &:active {
+            border: 1.0px solid $colorHighlightBdr;
+        }
+    }
 }
 
 .vivaldi-settings {
@@ -186,7 +197,14 @@ input[type=range] {
 }
 
 
-
+::-webkit-scrollbar-track {
+    margin: 5.5px;
+    &:hover {
+        background-color: $colorScrollBarTrackHvrBg !important;
+        border: 1px solid $colorScrollBarTrackBdr;
+        border-radius: calc(var(--scrollbarWidth) / 2);
+    }
+}
 .theme-dark {
     ::-webkit-scrollbar-thumb {
         border:1.0px solid $colorScrollBarBdr !important;
@@ -194,27 +212,14 @@ input[type=range] {
         &:hover {
             border:1.0px solid $colorHighlightBdr !important;
             background-color: $colorCkBxOnBg !important;
-            transition: background-color 0.9s !important;
         }
     }
 }
-
-@media not (prefers-contrast: more) {
-  ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 7.7px;
-    transition: background-color 0.9s !important;
-  }
 }
 
-::-webkit-scrollbar-track {
-    margin: 5.5px;
-    transition: background-color 0.9s !important;
-    &:hover {
-        background-color: $colorScrollBarTrackHvrBg !important;
-        border: 1px solid $colorScrollBarTrackBdr;
-        border-radius: calc(var(--scrollbarWidth) / 2);
-    }
-}
+
 // More start page stuff
 
 #browser {
@@ -242,7 +247,7 @@ input[type=range] {
         }
     }
 
-    &.theme-dark {  #webpage-stack {
+    &.theme-dark #webpage-stack {
         nav.startpage-navigation {
             background-color: rgba(42,46,50, 0.75);
             color: #fff;
@@ -252,5 +257,5 @@ input[type=range] {
             background-color: rgba(42,46,50, 0.75) !important;
             color: rgba(255,255,255, 0.9);
         }
-    }}
+    }
 }
