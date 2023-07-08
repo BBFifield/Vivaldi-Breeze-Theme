@@ -30,18 +30,20 @@
     }
 }
 
-@mixin button {
+@mixin button($colorChangeBg, $colorStagnantBg) {
+    border-radius: 3px !important;
+    background-color: $colorStagnantBg !important;
     background-image: none !important;
     transition: border 0.1s;
     &:hover {
         border: 1.0px solid $colorHighlightBdr !important;
         border-radius: 3px !important;
-        background-color: rgba(0,0,0,0.0) !important;
+        background-color: $colorChangeBg !important;
     }
     &:active {
         border: 1.0px solid $colorHighlightBdr !important;
         border-radius: 3px !important;
-        background-color: rgba(0,0,0,0.0) !important;
+        background-color: $colorChangeBg !important;
         transition: background-color 0.1s;
         &:hover {
             background-color: $colorBtnActiveHvrBg !important;

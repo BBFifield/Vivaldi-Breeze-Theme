@@ -1,5 +1,53 @@
 @import "./variables";
 
+.button-show-setting .ToolbarButton-Button, input[type=button]:not(.circular), input[type=submit], .privacy-btn-icon {
+    border: 1.0px solid $colorInputBtnBdr !important;
+    @include button($colorNonToolBarButton, $colorNonToolBarButton);
+}
+
+button[title="New Folder"] {
+    svg {
+        path {
+            d: path("m 0,0 v 1.333332 v 4 V 6.666668 V 14.66668 V 16 H 16 V 14.66668 V 5.333332 V 4 V 2.666668 H 9.333332 L 6.666668,0 V 0 V 0 H 1.333332 Z m 1.333332,1.333332 h 4.8 l1.333336,1.333336 h -0.8 v 0 v 0 L 4,5.333332 H 1.333332 Z m 0,5.333336 H 14.66668 V 14.66668 H 1.333332 Z");
+        }
+    }
+}
+
+button[title="Synced Tabs"] {
+    svg {
+        path {
+            d: path("M 13.357606,6.9301109 A 5.7852868,5.7856295 0 0 0 7.5723281,12.715738 a 5.7852868,5.7856295 0 0 0 0,0.771436 a 3.8568577,3.8570869 0 0 0 -2.5712399,3.728501 a 3.8568577,3.8570869 0 0 0 3.8568578,3.857082 h 9.642166 a 4.4996681,4.4999328 0 0 0 4.499652,-4.499946 a 4.4996681,4.4999328 0 0 0 -3.856858,-4.499907 a 5.7852868,5.7856295 0 0 0 -5.7853,-5.1427931 z m 0,1.2856963 a 4.4996681,4.4999328 0 0 1 4.499663,4.4999308 a 4.4996681,4.4999328 0 0 1 0,0.64284 a 3.2140462,3.2142376 0 0 1 0.642843,0 a 3.2140462,3.2142376 0 0 1 3.214018,3.214233 a 3.2140462,3.2142376 0 0 1 -3.214018,3.214252 H 8.857946 A 2.5712393,2.571391 0 0 1 6.2867114,17.215675 A 2.5712393,2.571391 0 0 1 8.857946,14.644279 a 2.5712393,2.571391 0 0 1 0.514251,0 A 4.4996681,4.4999328 0 0 1 8.857946,12.715738 a 4.4996681,4.4999328 0 0 1 4.49966,-4.4999308 z");
+        }
+    }
+}
+
+.toggle-trash {
+    button {
+        svg {
+            path:nth-child(1) {
+                d: path("m 11.5,6.5 v 1.25 h -5 V 9 h 1.25 c -2.6722672,0.00579 1.0622417,0.00173 2.1093747,-5.2e-6 C 6.5433434,9.0010117 11.665926,8.9990207 12.749997,9 V 7.75 h 2.5 V 9 H 16.5 c 0.583917,-0.00356 1.311978,0.00408 1.488289,9e-6 C 21.112044,8.996881 20.211674,9.0000852 21.5,9 V 7.75 h -5 V 6.5 Z");
+                stroke-width: 0.02;
+                fill: currentcolor;
+            }
+            path:nth-child(2) {
+                d: path("M 19,9 V 20.25 H 9 V 9 C 8.2295945,8.9999417 8.7320423,9.0109214 7.75,9 V 21.5 H 9 H 20.25 V 20.25 V 9 c -0.689196,0.00299 -0.739251,0.00103 -1.25,0 z");
+            }
+            line:nth-child(3) {
+                opacity: 1;
+                stroke: currentcolor;
+                stroke-width: 1.2;
+                stroke-linecap: unset;
+            }
+            line:nth-child(4) {
+                opacity: 1;
+                stroke: currentcolor;
+                stroke-width: 1.2;
+                stroke-linecap: unset;
+            }
+        }
+    }
+}
+
 .button-startpage.add-set {
     svg {
         path {
@@ -257,5 +305,13 @@ input[type="range" i] {
             background-color: rgba(42,46,50, 0.75) !important;
             color: rgba(255,255,255, 0.9);
         }
+    }
+}
+
+
+.modal-wrapper {
+    height: 540px !important;
+    .dialog-footer {
+        height: 52.8px !important;
     }
 }

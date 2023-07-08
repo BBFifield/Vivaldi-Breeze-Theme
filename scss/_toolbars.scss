@@ -38,20 +38,13 @@
 }
 
 
-.ToolbarButton-Button {
+.button-toolbar .ToolbarButton-Button {
     border: 1.0px solid rgba(0,0,0,0.0) !important;
-    border-radius: 3px !important;
+    @include button(rgba(0,0,0,0.0), rgba(0,0,0,0.0));
     &.button-pressed, &.button-pressed:hover {
         border: 1.0px solid $colorHighlightBdr !important;
         background-color: $colorBtnActiveHvrBg !important;
     }
-}
-.button-show-setting .ToolbarButton-Button, input[type=button]:not(.circular), .privacy-btn-icon {
-    border: 1.0px solid $colorInputBtnBdr !important;
-    background-color: var(--colorWindowBg) !important;
-}
-.button-toolbar button, input[type=button]:not(.circular), .privacy-btn-icon {
-    @include button;
 }
 
 
