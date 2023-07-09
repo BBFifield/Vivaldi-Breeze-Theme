@@ -1,10 +1,8 @@
-#header {
-    --colorAccentBg: #31363b;
-    --colorTabBar: var(--colorAccentBg);
-}
+$colorBtnMasterToolbar: #2E3236;
+$colorItemInactive: #1F485E;
 
-$colorNonToolBarButton: #31363b;
-
+$colorTrim: #64686B;
+$colorBdrSettingsSidebar: #454B50;
 $colorHighlightBdr: var(--colorHighlightBg);
 
 $colorCloseTitleBtnBg: #DA4453;
@@ -17,7 +15,7 @@ $colorCloseBtnBg: #898B8C;
 $colorCloseBtnActiveHvrBg: #A53D49;
 $colorCloseBtnActiveBg: #823943;
 
-$colorGeneralBdr: #5F6265;
+$colorSearchBdr: #5F6265;
 $colorBtnActiveHvrBg: #355D75;
 
 $colorStackCounter: #4460da;

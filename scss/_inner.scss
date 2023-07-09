@@ -1,81 +1,124 @@
-@import "./variables";
-
-.button-show-setting .ToolbarButton-Button, input[type=button]:not(.circular), input[type=submit], .privacy-btn-icon {
-    border: 1.0px solid $colorInputBtnBdr !important;
-    @include button($colorNonToolBarButton, $colorNonToolBarButton);
+.settings-content {
+    h2 {
+        border-bottom: 1px solid $colorBdrSettingsSidebar !important;
+    }
 }
 
-button[title="New Folder"] {
-    svg {
-        path {
-            d: path("m 0,0 v 1.333332 v 4 V 6.666668 V 14.66668 V 16 H 16 V 14.66668 V 5.333332 V 4 V 2.666668 H 9.333332 L 6.666668,0 V 0 V 0 H 1.333332 Z m 1.333332,1.333332 h 4.8 l1.333336,1.333336 h -0.8 v 0 v 0 L 4,5.333332 H 1.333332 Z m 0,5.333336 H 14.66668 V 14.66668 H 1.333332 Z");
+.master-detail {
+    .master-items {
+        border: 1px solid $colorBdrSettingsSidebar !important;
+
+        .item.item-selected {
+            background-color: $colorItemInactive;
+        }
+    }
+
+    .master-toolbar {
+        border: 1px solid $colorBdrSettingsSidebar !important;
+
+        select.button-toolbar {
+            background-image: url(downarrow_cropped.png);
+            background-size: 12px;
+            background-repeat: no-repeat;
+            background-position: center !important;
+            &:hover {
+                border: 1.0px solid $colorHighlightBdr !important;
+                border-radius: 3px !important;
+            }
+        }
+        button.button-toolbar {
+            border: 0px solid rgba(0,0,0,0.0) !important;
+            border-bottom: 1px solid $colorBdrSettingsSidebar !important;
+            @include button($colorBtnMasterToolbar, $colorBtnMasterToolbar, 0px);
+
+            &:nth-of-type(1) {
+                svg path {
+                    transform: matrix(0.8,0,0,0.8,-0.4,-1.2);
+                    d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
+                }
+            }
+            &:nth-of-type(2) {
+                svg path {
+                    d: path("m 2,7.4550779 v 1.0878907 c 4.115672,-6.105e-4 7.9252791,2e-7 12,2e-7 V 7.4550781 c -4.0648358,-5.603e-4 -7.9623522,-2e-7 -12,-2e-7 z");
+                }
+            }
+            &:nth-of-type(3) {
+                svg path {
+                    d: path("m 8,4.647 l -6,6 l 0.707,0.707 L 8,6.061 l 5.293,5.293 L 14,10.647 Z");
+                }
+            }
+            &:nth-of-type(4) {
+                svg path {
+                    d: path("m 8,11.353 l -6,-6 L 2.707,4.646 L 8,9.939 L 13.293,4.646 L 14,5.353 Z");
+                }
+            }
         }
     }
 }
 
-button[title="Synced Tabs"] {
-    svg {
-        path {
-            d: path("M 13.357606,6.9301109 A 5.7852868,5.7856295 0 0 0 7.5723281,12.715738 a 5.7852868,5.7856295 0 0 0 0,0.771436 a 3.8568577,3.8570869 0 0 0 -2.5712399,3.728501 a 3.8568577,3.8570869 0 0 0 3.8568578,3.857082 h 9.642166 a 4.4996681,4.4999328 0 0 0 4.499652,-4.499946 a 4.4996681,4.4999328 0 0 0 -3.856858,-4.499907 a 5.7852868,5.7856295 0 0 0 -5.7853,-5.1427931 z m 0,1.2856963 a 4.4996681,4.4999328 0 0 1 4.499663,4.4999308 a 4.4996681,4.4999328 0 0 1 0,0.64284 a 3.2140462,3.2142376 0 0 1 0.642843,0 a 3.2140462,3.2142376 0 0 1 3.214018,3.214233 a 3.2140462,3.2142376 0 0 1 -3.214018,3.214252 H 8.857946 A 2.5712393,2.571391 0 0 1 6.2867114,17.215675 A 2.5712393,2.571391 0 0 1 8.857946,14.644279 a 2.5712393,2.571391 0 0 1 0.514251,0 A 4.4996681,4.4999328 0 0 1 8.857946,12.715738 a 4.4996681,4.4999328 0 0 1 4.49966,-4.4999308 z");
-        }
+
+
+.button-show-setting .ToolbarButton-Button, input[type=button]:not(.circular), input[type=submit], .privacy-btn-icon {
+    border: 1.0px solid $colorInputBtnBdr !important;
+    @include button(var(--colorTabBar), var(--colorTabBar), 3px);
+}
+
+button[title="New Folder"] {
+    svg path {
+        d: path("m 0,0 v 1.333332 v 4 V 6.666668 V 14.66668 V 16 H 16 V 14.66668 V 5.333332 V 4 V 2.666668 H 9.333332 L 6.666668,0 V 0 V 0 H 1.333332 Z m 1.333332,1.333332 h 4.8 l1.333336,1.333336 h -0.8 v 0 v 0 L 4,5.333332 H 1.333332 Z m 0,5.333336 H 14.66668 V 14.66668 H 1.333332 Z");
+    }
+}
+
+.synced-tabs-button {
+    svg path {
+        d: path("M 13.357606,6.9301109 A 5.7852868,5.7856295 0 0 0 7.5723281,12.715738 a 5.7852868,5.7856295 0 0 0 0,0.771436 a 3.8568577,3.8570869 0 0 0 -2.5712399,3.728501 a 3.8568577,3.8570869 0 0 0 3.8568578,3.857082 h 9.642166 a 4.4996681,4.4999328 0 0 0 4.499652,-4.499946 a 4.4996681,4.4999328 0 0 0 -3.856858,-4.499907 a 5.7852868,5.7856295 0 0 0 -5.7853,-5.1427931 z m 0,1.2856963 a 4.4996681,4.4999328 0 0 1 4.499663,4.4999308 a 4.4996681,4.4999328 0 0 1 0,0.64284 a 3.2140462,3.2142376 0 0 1 0.642843,0 a 3.2140462,3.2142376 0 0 1 3.214018,3.214233 a 3.2140462,3.2142376 0 0 1 -3.214018,3.214252 H 8.857946 A 2.5712393,2.571391 0 0 1 6.2867114,17.215675 A 2.5712393,2.571391 0 0 1 8.857946,14.644279 a 2.5712393,2.571391 0 0 1 0.514251,0 A 4.4996681,4.4999328 0 0 1 8.857946,12.715738 a 4.4996681,4.4999328 0 0 1 4.49966,-4.4999308 z");
     }
 }
 
 .toggle-trash {
-    button {
-        svg {
-            path:nth-child(1) {
-                d: path("m 11.5,6.5 v 1.25 h -5 V 9 h 1.25 c -2.6722672,0.00579 1.0622417,0.00173 2.1093747,-5.2e-6 C 6.5433434,9.0010117 11.665926,8.9990207 12.749997,9 V 7.75 h 2.5 V 9 H 16.5 c 0.583917,-0.00356 1.311978,0.00408 1.488289,9e-6 C 21.112044,8.996881 20.211674,9.0000852 21.5,9 V 7.75 h -5 V 6.5 Z");
-                stroke-width: 0.02;
-                fill: currentcolor;
-            }
-            path:nth-child(2) {
-                d: path("M 19,9 V 20.25 H 9 V 9 C 8.2295945,8.9999417 8.7320423,9.0109214 7.75,9 V 21.5 H 9 H 20.25 V 20.25 V 9 c -0.689196,0.00299 -0.739251,0.00103 -1.25,0 z");
-            }
-            line:nth-child(3) {
-                opacity: 1;
-                stroke: currentcolor;
-                stroke-width: 1.2;
-                stroke-linecap: unset;
-            }
-            line:nth-child(4) {
-                opacity: 1;
-                stroke: currentcolor;
-                stroke-width: 1.2;
-                stroke-linecap: unset;
-            }
+    svg {
+        path:nth-child(1) {
+            d: path("m 11.5,6.5 v 1.25 h -5 V 9 h 1.25 c -2.6722672,0.00579 1.0622417,0.00173 2.1093747,-5.2e-6 C 6.5433434,9.0010117 11.665926,8.9990207 12.749997,9 V 7.75 h 2.5 V 9 H 16.5 c 0.583917,-0.00356 1.311978,0.00408 1.488289,9e-6 C 21.112044,8.996881 20.211674,9.0000852 21.5,9 V 7.75 h -5 V 6.5 Z");
+            stroke-width: 0.02;
+            fill: currentcolor;
+        }
+        path:nth-child(2) {
+            d: path("M 19,9 V 20.25 H 9 V 9 C 8.2295945,8.9999417 8.7320423,9.0109214 7.75,9 V 21.5 H 9 H 20.25 V 20.25 V 9 c -0.689196,0.00299 -0.739251,0.00103 -1.25,0 z");
+        }
+        line:nth-child(3) {
+            opacity: 1;
+            stroke: currentcolor;
+            stroke-width: 1.2;
+            stroke-linecap: unset;
+        }
+        line:nth-child(4) {
+            opacity: 1;
+            stroke: currentcolor;
+            stroke-width: 1.2;
+            stroke-linecap: unset;
         }
     }
 }
 
 .button-startpage.add-set {
-    svg {
-        path {
-            d: path("M 7.2727258,0 V 7.262919 H 0 V 8.71436 H 7.2727258 V 16 H 8.72727 V 8.71436 H 16 V 7.262919 H 8.72727 V 0 Z");
-        }
+    svg path {
+        d: path("M 7.2727258,0 V 7.262919 H 0 V 8.71436 H 7.2727258 V 16 H 8.72727 V 8.71436 H 16 V 7.262919 H 8.72727 V 0 Z");
     }
 }
 
 .circular {
-    &.update-thumbnail {
-        svg {
-            path {
-                d: path("m 14,8 c 0,1.1088173 -0.319333,2.140071 -0.84375,3.03125 l -2.6875,-2.6875 L 11.1875,7.625 l 1.625,1.625 c 0.05109,-0.19534 0.09772,-0.3898623 0.125,-0.59375 C 12.945289,8.6038437 12.962684,8.5529713 12.96875,8.5 C 12.98582,8.3319146 13,8.172589 13,8 C 13,5.238576 10.761424,3 8,3 C 7.756976,3 7.5144918,3.02845 7.28125,3.0625 C 7.1450007,3.082455 7.0074468,3.094286 6.875,3.125 C 6.5884185,3.19195 6.327376,3.291647 6.0625,3.40625 C 6.031825,3.419522 5.999101,3.423626 5.96875,3.4375 c -0.09166,0.040961 -0.163333,0.108255 -0.25,0.15625 c -0.008,0.00445 -0.02305,-0.00433 -0.03125,0 l -0.71875,-0.75 C 5.859929,2.319333 6.891182,2 8,2 c 3.313709,0 6,2.686293 6,6 z m -2.96875,5.15625 C 10.140071,13.680667 9.108818,14 8,14 C 4.686291,14 2,11.313707 2,8 C 2,6.8911827 2.319333,5.859929 2.84375,4.96875 l 0.75,0.75 L 5.5,7.65625 L 4.8125,8.34375 L 3.1875,6.75 C 3.13641,6.94534 3.08978,7.1398623 3.0625,7.34375 C 3.0547,7.396156 3.03732,7.4470287 3.03125,7.5 C 3.01418,7.6680854 3,7.827411 3,8 C 3,8.172589 3.01418,8.3319146 3.03125,8.5 C 3.04832,8.6680853 3.060448,8.837256 3.09375,9 C 3.559981,11.278415 5.583754,13 8,13 c 0.2482626,0 0.4801862,-0.02756 0.71875,-0.0625 C 8.8549993,12.91755 8.9925532,12.90571 9.125,12.875 c 0.2865815,-0.06695 0.547624,-0.166647 0.8125,-0.28125 c 0.030718,-0.01299 0.063349,-0.01766 0.09375,-0.03125 c 0.08886,-0.04062 0.164735,-0.108612 0.25,-0.15625 h 0.03125 z");
-            }
-        }
+    &.update-thumbnail svg path {
+        d: path("m 14,8 c 0,1.1088173 -0.319333,2.140071 -0.84375,3.03125 l -2.6875,-2.6875 L 11.1875,7.625 l 1.625,1.625 c 0.05109,-0.19534 0.09772,-0.3898623 0.125,-0.59375 C 12.945289,8.6038437 12.962684,8.5529713 12.96875,8.5 C 12.98582,8.3319146 13,8.172589 13,8 C 13,5.238576 10.761424,3 8,3 C 7.756976,3 7.5144918,3.02845 7.28125,3.0625 C 7.1450007,3.082455 7.0074468,3.094286 6.875,3.125 C 6.5884185,3.19195 6.327376,3.291647 6.0625,3.40625 C 6.031825,3.419522 5.999101,3.423626 5.96875,3.4375 c -0.09166,0.040961 -0.163333,0.108255 -0.25,0.15625 c -0.008,0.00445 -0.02305,-0.00433 -0.03125,0 l -0.71875,-0.75 C 5.859929,2.319333 6.891182,2 8,2 c 3.313709,0 6,2.686293 6,6 z m -2.96875,5.15625 C 10.140071,13.680667 9.108818,14 8,14 C 4.686291,14 2,11.313707 2,8 C 2,6.8911827 2.319333,5.859929 2.84375,4.96875 l 0.75,0.75 L 5.5,7.65625 L 4.8125,8.34375 L 3.1875,6.75 C 3.13641,6.94534 3.08978,7.1398623 3.0625,7.34375 C 3.0547,7.396156 3.03732,7.4470287 3.03125,7.5 C 3.01418,7.6680854 3,7.827411 3,8 C 3,8.172589 3.01418,8.3319146 3.03125,8.5 C 3.04832,8.6680853 3.060448,8.837256 3.09375,9 C 3.559981,11.278415 5.583754,13 8,13 c 0.2482626,0 0.4801862,-0.02756 0.71875,-0.0625 C 8.8549993,12.91755 8.9925532,12.90571 9.125,12.875 c 0.2865815,-0.06695 0.547624,-0.166647 0.8125,-0.28125 c 0.030718,-0.01299 0.063349,-0.01766 0.09375,-0.03125 c 0.08886,-0.04062 0.164735,-0.108612 0.25,-0.15625 h 0.03125 z");
     }
-    &.set-custom-thumbnail path {
+    &.set-custom-thumbnail svg path {
         transform: matrix(0.8,0,0,0.8,-0.4,-1.2);
         d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
     }
-}
-
-
-
-button.close.circular svg path {
-    fill: var(--colorFg);
-    transform: matrix(1.6666667,0,0,1.6666667,-5.3333335,-5.3333335);
-    d: path("M 5.7070312,5 L 5,5.7070312 L 7.2929688,8 L 5,10.292969 L 5.7070312,11 L 8,8.7070312 L 10.292969,11 L 11,10.292969 L 8.7070312,8 L 11,5.7070312 L 10.292969,5 L 8,7.2929688 Z");
+    &.close svg path {
+        fill: var(--colorFg);
+        transform: matrix(1.6666667,0,0,1.6666667,-5.3333335,-5.3333335);
+        d: path("M 5.7070312,5 L 5,5.7070312 L 7.2929688,8 L 5,10.292969 L 5.7070312,11 L 8,8.7070312 L 10.292969,11 L 11,10.292969 L 8.7070312,8 L 11,5.7070312 L 10.292969,5 L 8,7.2929688 Z");
+    }
 }
 
 .SpeedDialView-Settings-Button path, .button-toolbar.button-show-setting path {
@@ -135,7 +178,7 @@ input[type=checkbox] {
 input[type=radio] {
     background-image: none !important;
     background-color: $colorInputBg !important;
-    border: 1.0px solid #5F6265 !important;
+    border: 1.0px solid $colorSearchBdr !important;
 
     &:hover {
         border: 1.0px solid $colorHighlightBdr !important;
@@ -160,7 +203,7 @@ input[type=search], input[type=text]:not(#urlFieldInput) {
 
 select {
    border: 1.0px solid $colorInputBtnBdr !important;
-   background-color: var(--colorWindowBg) !important;
+   background-color: var(--colorTabBar) !important;
    height: 29.5px !important;
 
     &:hover {
@@ -172,7 +215,7 @@ select {
         border: 1.0px solid $colorHighlightBdr !important;
     }
     &:not([multiple]):not([size]), input[type=date] {
-        background-image: url("whitearrow.png");
+        background-image: url("downarrow.png");
         background-size: 15.2px;
         background-repeat: no-repeat;
         background-position: right center;
@@ -212,9 +255,9 @@ input[type="range" i] {
 .vivaldi-settings {
     .settings-sidebar {
         box-shadow: none;
-        border-right: 0.9px solid var(--colorBorderSubtle);
+        border-right: 0.9px solid $colorBdrSettingsSidebar;
         .settings-navigation-header {
-            border-bottom: 0.9px solid var(--colorBorderSubtle);
+            border-bottom: 0.9px solid $colorBdrSettingsSidebar;
         }
         .ReactVirtualized__Grid.ReactVirtualized__List {
             background-color: $colorInputBg;
@@ -225,7 +268,7 @@ input[type="range" i] {
                     background-color: $colorHighlightBdr;
                 }
                 &.spacer {
-                    border-top: 0.9px solid var(--colorBorderSubtle);
+                    border-top: 0.9px solid $colorBdrSettingsSidebar;
                 }
             }
         }

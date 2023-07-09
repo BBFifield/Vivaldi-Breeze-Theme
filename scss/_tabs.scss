@@ -1,7 +1,5 @@
-@import "./variables";
-
 #tabs-container.top {
-  border-bottom: 1.0px solid $colorGeneralBdr;
+  border-bottom: 1.0px solid $colorSearchBdr;
 }
 
 .tab-strip {
@@ -10,8 +8,8 @@
             &.active {
                 border-radius: 3px 3px 0 0 !important;
                 border-top:    3.5px solid $colorHighlightBdr;
-                border-right:  1.0px solid $colorGeneralBdr;
-                border-left:   1.0px solid $colorGeneralBdr;
+                border-right:  1.0px solid $colorSearchBdr;
+                border-left:   1.0px solid $colorSearchBdr;
                 margin: 0 -2px -1px -2px;
                 background-color: var(--colorBg) !important;
             }

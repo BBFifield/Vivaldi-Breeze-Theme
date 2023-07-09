@@ -1,6 +1,3 @@
-@import "./variables";
-
-
 /*
  A: In order to have window shade you also need to:
       1. setup a kwin window rule to setting "Window class"="vivaldi-stable" and "No titlebar and frame"="Force No"
@@ -26,11 +23,11 @@
         &:hover {
             border-color: var(--colorBg);
             background-color: var(--colorFg) !important;
-            fill: var(--colorWindowBg) !important;
+            fill: var(--colorTabBar) !important;
         }
         &:active {
             background-color: $colorMinMaxBtnActiveBg !important;
-            fill: var(--colorWindowBg) !important;
+            fill: var(--colorTabBar) !important;
         }
 
         svg {
@@ -50,11 +47,11 @@
         &:hover {
             border-color: var(--colorBg);
             background-color: var(--colorFg) !important;
-            fill: var(--colorWindowBg) !important;
+            fill: var(--colorTabBar) !important;
         }
         &:active {
             background-color: $colorMinMaxBtnActiveBg !important;
-            fill: var(--colorWindowBg) !important;
+            fill: var(--colorTabBar) !important;
         }
 
         svg {
@@ -75,7 +72,7 @@
         @include button-commons;
         border-color: var(--colorBg) !important;
         background-color: $colorCloseTitleBtnBg !important;
-        fill: var(--colorWindowBg) !important;
+        fill: var(--colorTabBar) !important;
         margin-right: 0.37px !important;
         &:hover {
             background-color: $colorCloseTitleBtnonHvrBg !important;

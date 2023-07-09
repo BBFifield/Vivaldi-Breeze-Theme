@@ -3,7 +3,7 @@
 @mixin search-field {
     height: 29.5px;
     border-radius: 2px;
-    border: 1.0px solid $colorGeneralBdr !important;
+    border: 1.0px solid $colorSearchBdr !important;
     background-color: $colorInputBg !important;
     transition: border 0.1s;
 
@@ -30,8 +30,8 @@
     }
 }
 
-@mixin button($colorChangeBg, $colorStagnantBg) {
-    border-radius: 3px !important;
+@mixin button($colorChangeBg, $colorStagnantBg, $radius) {
+    border-radius: $radius !important;
     background-color: $colorStagnantBg !important;
     background-image: none !important;
     transition: border 0.1s;
