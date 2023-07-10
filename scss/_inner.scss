@@ -2,33 +2,119 @@
     h2 {
         border-bottom: 1px solid $colorBdrSettingsSidebar !important;
     }
+    .keystrokes {
+        border: 1px solid $colorBdrSettingsSidebar !important;
+        border-radius: 3px;
+        .category {
+            &.hide {
+                background-color: $colorInputBg;
+                button {
+                    &:after {
+                        -webkit-mask-image: url(downarrow_cropped.png);
+                        transform: rotate(-90deg);
+                        transition: transform 100ms linear;
+                        -webkit-mask-size: cover;
+                        -webkit-mask-position: 0px;
+                        width: 16px;
+                        height: 8.5px;
+                        top: 14px;
+                    }
+                }
+
+                &:hover {
+                    background-color: $colorCategoryHover;
+                }
+            }
+            &.show {
+                button {
+                    background-color: $colorBtnActiveHvrBg;
+                    border: 1px solid $colorHighlightBdr;
+
+                    &:after {
+                        -webkit-mask-image: url(downarrow_cropped.png);
+                        transition: transform 100ms linear;
+                        -webkit-mask-size: cover;
+                        -webkit-mask-position: 0px;
+                        width: 16px;
+                        height: 8.5px;
+                        top: 14px;
+                    }
+                }
+                .multiinput {
+                    border: none;
+                    outline: none;
+                }
+                .circular {
+                    &.clearkey {
+                        -webkit-mask-image: url(window-close-symbolic.png);
+                    }
+                    &.restorekey {
+                        -webkit-mask-image: url(view-refresh-symbolic.png);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gesture-map.setting-single {
+    select {
+        height: 200px !important;
+    }
+}
+
+.Inner__control {
+    border: 1.0px solid $colorInputBtnBdr !important;
+    background-color:  var(--colorTabBar) !important;
+    height: 29.5px !important;
+    &:hover {
+        border: 1.0px solid $colorHighlightBdr !important;
+    }
+    &:active, &:focus-within {
+        outline: 0px !important;
+        background-color: $colorBtnActiveHvrBg !important;
+        border: 1.0px solid $colorHighlightBdr !important;
+
+    }
+    .Inner__indicator {
+        background-image: url("downarrow.png") !important;
+        background-size: 15.2px !important;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+
+    .Inner__input {
+        #react-select-2-input, #react-select-3-input {
+            background-color: transparent !important;
+            border: none !important;
+        }
+    }
 }
 
 .master-detail {
+    border: 1px solid $colorBdrSettingsSidebar !important;
+    border-radius: 3px !important;
     .master-items {
-        border: 1px solid $colorBdrSettingsSidebar !important;
-
+        border: 0px !important;
+        background-color: $colorInputBg !important;
+        background-image: none !important;
         .item.item-selected {
             background-color: $colorItemInactive;
         }
     }
 
     .master-toolbar {
-        border: 1px solid $colorBdrSettingsSidebar !important;
+        border: 1px solid rgba(0,0,0,0.0) !important;
+        border-top: 1px solid $colorBdrSettingsSidebar !important;
 
         select.button-toolbar {
             background-image: url(downarrow_cropped.png);
             background-size: 12px;
-            background-repeat: no-repeat;
             background-position: center !important;
-            &:hover {
-                border: 1.0px solid $colorHighlightBdr !important;
-                border-radius: 3px !important;
-            }
+            border-radius: 0px !important;
         }
         button.button-toolbar {
-            border: 0px solid rgba(0,0,0,0.0) !important;
-            border-bottom: 1px solid $colorBdrSettingsSidebar !important;
+            border: 1px solid rgba(0,0,0,0.0) !important;
             @include button($colorBtnMasterToolbar, $colorBtnMasterToolbar, 0px);
 
             &:nth-of-type(1) {
@@ -54,8 +140,55 @@
             }
         }
     }
+    .master-layout-single {
+        border: 1px solid rgba(0,0,0,0.0) !important;
+        border-right: 1px solid $colorBdrSettingsSidebar !important;
+    }
+    .detail {
+        border: 1px solid rgba(0,0,0,0.0);
+    }
 }
 
+.vivaldi-tree {
+    border: 1px solid $colorBdrSettingsSidebar !important;
+    .tree-row[data-selected] {
+        background-color: $colorItemInactive;
+    }
+}
+
+.TabbedView {
+    border: 1px solid $colorBdrSettingsSidebar;
+    .TabbedView-List {
+        border: 1px solid $colorBdrSettingsSidebar;
+
+        button {
+            border: 1.0px solid $colorInputBtnBdr !important;
+            @include button(var(--colorTabBar), var(--colorTabBar), 3px)
+        }
+    }
+    .TabbedView-Content {
+        .ThemeEditorColorPicker-ColorInput {
+            border: 1px solid $colorBdrSettingsSidebar;
+        }
+        .TabbedView-Footer {
+            border-top: 1px solid $colorBdrSettingsSidebar;
+        }
+        .Button-Manager {
+            select {
+                height: 82px !important;
+            }
+        }
+    }
+}
+
+.toolbar-default {
+    .button-toolbar {
+        button {
+            border: 1.0px solid $colorInputBtnBdr !important;
+            @include button(var(--colorTabBar), var(--colorTabBar), 3px);
+        }
+    }
+}
 
 
 .button-show-setting .ToolbarButton-Button, input[type=button]:not(.circular), input[type=submit], .privacy-btn-icon {
@@ -148,6 +281,20 @@ button[title="New Folder"] {
     }
 }
 
+input[type=number] {
+    border: 1.0px solid $colorInputBtnBdr !important;
+    background-color: var(--colortab);
+    transition: border 0.1s !important;
+    &:hover {
+        border: 1.0px solid $colorHighlightBdr !important;
+        transition-duration: 5ms !important;
+    }
+    &:focus-visible {
+        outline: 0px !important;
+        border: 1.0px solid $colorHighlightBdr !important;
+    }
+}
+
 input[type=checkbox] {
     background-image: none !important;
     background-color: $colorInputBg !important;
@@ -203,7 +350,7 @@ input[type=search], input[type=text]:not(#urlFieldInput) {
 
 select {
    border: 1.0px solid $colorInputBtnBdr !important;
-   background-color: var(--colorTabBar) !important;
+   background-color:  var(--colorTabBar) !important;
    height: 29.5px !important;
 
     &:hover {
@@ -223,7 +370,7 @@ select {
     }
 }
 
-input[type=date] {
+input[type="date"] {
     background-image: url("whitearrow.png");
     background-size: 15.2px;
     background-repeat: no-repeat;

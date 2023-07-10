@@ -193,12 +193,10 @@
 }
 .button-toolbar .ToolbarButton-Button:hover {
   border: 1px solid var(--colorHighlightBg) !important;
-  border-radius: 3px !important;
   background-color: rgba(0, 0, 0, 0) !important;
 }
 .button-toolbar .ToolbarButton-Button:active {
   border: 1px solid var(--colorHighlightBg) !important;
-  border-radius: 3px !important;
   background-color: rgba(0, 0, 0, 0) !important;
   transition: background-color 0.1s;
 }
@@ -271,40 +269,115 @@ button[name=PanelBookmarks], button[name=PanelHistory], button[name=PanelNotes] 
 
 footer {
   height: 35px !important;
+  border: 0px rgba(0, 0, 0, 0) !important;
 }
 footer .toolbar-statusbar {
   height: 33px !important;
 }
 footer:after {
   bottom: 34px !important;
+  background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .settings-content h2 {
   border-bottom: 1px solid #454B50 !important;
 }
-
-.master-detail .master-items {
+.settings-content .keystrokes {
   border: 1px solid #454B50 !important;
+  border-radius: 3px;
+}
+.settings-content .keystrokes .category.hide {
+  background-color: #1B1E20;
+}
+.settings-content .keystrokes .category.hide button:after {
+  -webkit-mask-image: url(downarrow_cropped.png);
+  transform: rotate(-90deg);
+  transition: transform 100ms linear;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: 0px;
+  width: 16px;
+  height: 8.5px;
+  top: 14px;
+}
+.settings-content .keystrokes .category.hide:hover {
+  background-color: #25495C;
+}
+.settings-content .keystrokes .category.show button {
+  background-color: #355D75;
+  border: 1px solid var(--colorHighlightBg);
+}
+.settings-content .keystrokes .category.show button:after {
+  -webkit-mask-image: url(downarrow_cropped.png);
+  transition: transform 100ms linear;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: 0px;
+  width: 16px;
+  height: 8.5px;
+  top: 14px;
+}
+.settings-content .keystrokes .category.show .multiinput {
+  border: none;
+  outline: none;
+}
+.settings-content .keystrokes .category.show .circular.clearkey {
+  -webkit-mask-image: url(window-close-symbolic.png);
+}
+.settings-content .keystrokes .category.show .circular.restorekey {
+  -webkit-mask-image: url(view-refresh-symbolic.png);
+}
+
+.gesture-map.setting-single select {
+  height: 200px !important;
+}
+
+.Inner__control {
+  border: 1px solid #6E7175 !important;
+  background-color: var(--colorTabBar) !important;
+  height: 29.5px !important;
+}
+.Inner__control:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+.Inner__control:active, .Inner__control:focus-within {
+  outline: 0px !important;
+  background-color: #355D75 !important;
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+.Inner__control .Inner__indicator {
+  background-image: url("downarrow.png") !important;
+  background-size: 15.2px !important;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.Inner__control .Inner__input #react-select-2-input, .Inner__control .Inner__input #react-select-3-input {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.master-detail {
+  border: 1px solid #454B50 !important;
+  border-radius: 3px !important;
+}
+.master-detail .master-items {
+  border: 0px !important;
+  background-color: #1B1E20 !important;
+  background-image: none !important;
 }
 .master-detail .master-items .item.item-selected {
   background-color: #1F485E;
 }
 .master-detail .master-toolbar {
-  border: 1px solid #454B50 !important;
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+  border-top: 1px solid #454B50 !important;
 }
 .master-detail .master-toolbar select.button-toolbar {
   background-image: url(downarrow_cropped.png);
   background-size: 12px;
-  background-repeat: no-repeat;
   background-position: center !important;
-}
-.master-detail .master-toolbar select.button-toolbar:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  border-radius: 3px !important;
+  border-radius: 0px !important;
 }
 .master-detail .master-toolbar button.button-toolbar {
-  border: 0px solid rgba(0, 0, 0, 0) !important;
-  border-bottom: 1px solid #454B50 !important;
+  border: 1px solid rgba(0, 0, 0, 0) !important;
   border-radius: 0px !important;
   background-color: #2E3236 !important;
   background-image: none !important;
@@ -312,12 +385,10 @@ footer:after {
 }
 .master-detail .master-toolbar button.button-toolbar:hover {
   border: 1px solid var(--colorHighlightBg) !important;
-  border-radius: 3px !important;
   background-color: #2E3236 !important;
 }
 .master-detail .master-toolbar button.button-toolbar:active {
   border: 1px solid var(--colorHighlightBg) !important;
-  border-radius: 3px !important;
   background-color: #2E3236 !important;
   transition: background-color 0.1s;
 }
@@ -337,6 +408,75 @@ footer:after {
 .master-detail .master-toolbar button.button-toolbar:nth-of-type(4) svg path {
   d: path("m 8,11.353 l -6,-6 L 2.707,4.646 L 8,9.939 L 13.293,4.646 L 14,5.353 Z");
 }
+.master-detail .master-layout-single {
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+  border-right: 1px solid #454B50 !important;
+}
+.master-detail .detail {
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.vivaldi-tree {
+  border: 1px solid #454B50 !important;
+}
+.vivaldi-tree .tree-row[data-selected] {
+  background-color: #1F485E;
+}
+
+.TabbedView {
+  border: 1px solid #454B50;
+}
+.TabbedView .TabbedView-List {
+  border: 1px solid #454B50;
+}
+.TabbedView .TabbedView-List button {
+  border: 1px solid #6E7175 !important;
+  border-radius: 3px !important;
+  background-color: var(--colorTabBar) !important;
+  background-image: none !important;
+  transition: border 0.1s;
+}
+.TabbedView .TabbedView-List button:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+}
+.TabbedView .TabbedView-List button:active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+  transition: background-color 0.1s;
+}
+.TabbedView .TabbedView-List button:active:hover {
+  background-color: #355D75 !important;
+}
+.TabbedView .TabbedView-Content .ThemeEditorColorPicker-ColorInput {
+  border: 1px solid #454B50;
+}
+.TabbedView .TabbedView-Content .TabbedView-Footer {
+  border-top: 1px solid #454B50;
+}
+.TabbedView .TabbedView-Content .Button-Manager select {
+  height: 82px !important;
+}
+
+.toolbar-default .button-toolbar button {
+  border: 1px solid #6E7175 !important;
+  border-radius: 3px !important;
+  background-color: var(--colorTabBar) !important;
+  background-image: none !important;
+  transition: border 0.1s;
+}
+.toolbar-default .button-toolbar button:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+}
+.toolbar-default .button-toolbar button:active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+  transition: background-color 0.1s;
+}
+.toolbar-default .button-toolbar button:active:hover {
+  background-color: #355D75 !important;
+}
 
 .button-show-setting .ToolbarButton-Button, input[type=button]:not(.circular), input[type=submit], .privacy-btn-icon {
   border: 1px solid #6E7175 !important;
@@ -347,12 +487,10 @@ footer:after {
 }
 .button-show-setting .ToolbarButton-Button:hover, input[type=button]:not(.circular):hover, input[type=submit]:hover, .privacy-btn-icon:hover {
   border: 1px solid var(--colorHighlightBg) !important;
-  border-radius: 3px !important;
   background-color: var(--colorTabBar) !important;
 }
 .button-show-setting .ToolbarButton-Button:active, input[type=button]:not(.circular):active, input[type=submit]:active, .privacy-btn-icon:active {
   border: 1px solid var(--colorHighlightBg) !important;
-  border-radius: 3px !important;
   background-color: var(--colorTabBar) !important;
   transition: background-color 0.1s;
 }
@@ -427,6 +565,20 @@ button[title="New Folder"] svg path {
 .Switch-Input:checked {
   border: 1px solid var(--colorHighlightBg) !important;
   background-color: #346E8E !important;
+}
+
+input[type=number] {
+  border: 1px solid #6E7175 !important;
+  background-color: var(--colortab);
+  transition: border 0.1s !important;
+}
+input[type=number]:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  transition-duration: 5ms !important;
+}
+input[type=number]:focus-visible {
+  outline: 0px !important;
+  border: 1px solid var(--colorHighlightBg) !important;
 }
 
 input[type=checkbox] {

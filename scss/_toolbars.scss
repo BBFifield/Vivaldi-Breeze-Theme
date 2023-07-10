@@ -110,11 +110,15 @@ button[name=PanelBookmarks], button[name=PanelHistory], button[name=PanelNotes] 
 
 footer {
     height: 35px !important;
+    border: 0px rgba(0,0,0,0.0)!important;
     .toolbar-statusbar {
         height: 33px !important;
     }
     &:after {
         bottom: 34px !important;
+        background-color: rgba(0,0,0,0.0) !important;
     }
 
 }
+
+
