@@ -84,7 +84,7 @@
     }
 
     .Inner__input {
-        #react-select-2-input, #react-select-3-input {
+        input[id^=react-select-] {
             background-color: transparent !important;
             border: none !important;
         }
@@ -98,8 +98,13 @@
         border: 0px !important;
         background-color: $colorInputBg !important;
         background-image: none !important;
-        .item.item-selected {
-            background-color: $colorItemInactive;
+        .item {
+            &.item-selected {
+                background-color: $colorItemInactive;
+            }
+            &:hover:not(.item-selected) {
+                background-color: $colorCategoryHover;
+            }
         }
     }
 
@@ -108,6 +113,7 @@
         border-top: 1px solid $colorBdrSettingsSidebar !important;
 
         select.button-toolbar {
+            z-index: 0;
             background-image: url(downarrow_cropped.png);
             background-size: 12px;
             background-position: center !important;
@@ -151,16 +157,25 @@
 
 .vivaldi-tree {
     border: 1px solid $colorBdrSettingsSidebar !important;
-    .tree-row[data-selected] {
-        background-color: $colorItemInactive;
+    .tree-row {
+        &[data-selected] {
+            background-color: $colorItemInactive;
+        }
+        &:hover {
+            &:not([data-selected]) {
+                background-color: $colorCategoryHover;
+            }
+        }
+
     }
 }
 
 .TabbedView {
     border: 1px solid $colorBdrSettingsSidebar;
+    background-color: $colorInputBg;
     .TabbedView-List {
         border: 1px solid $colorBdrSettingsSidebar;
-
+        background-color: $colorTabbedViewBg;
         button {
             border: 1.0px solid $colorInputBtnBdr !important;
             @include button(var(--colorTabBar), var(--colorTabBar), 3px)
@@ -178,12 +193,16 @@
                 height: 82px !important;
             }
         }
+        .sortselector.sortselector-tableheader {
+            background-color: var(--colorAccentBg);
+            border: none;
+        }
     }
 }
 
 .toolbar-default {
     .button-toolbar {
-        button {
+        .ToolbarButton-Button {
             border: 1.0px solid $colorInputBtnBdr !important;
             @include button(var(--colorTabBar), var(--colorTabBar), 3px);
         }
@@ -282,8 +301,7 @@ button[title="New Folder"] {
 }
 
 input[type=number] {
-    border: 1.0px solid $colorInputBtnBdr !important;
-    background-color: var(--colortab);
+    //border: 1.0px solid $colorInputBtnBdr !important;
     transition: border 0.1s !important;
     &:hover {
         border: 1.0px solid $colorHighlightBdr !important;
@@ -343,16 +361,16 @@ input[type=radio] {
     }
 }
 
-input[type=search], input[type=text]:not(#urlFieldInput) {
+input[type=search], input[type=text]:not(#urlFieldInput):not([id^=react-select-]) {
     @include search-field;
 }
 
 
 select {
-   border: 1.0px solid $colorInputBtnBdr !important;
-   background-color:  var(--colorTabBar) !important;
-   height: 29.5px !important;
-
+    border: 1.0px solid $colorInputBtnBdr !important;
+    background-color:  var(--colorTabBar) !important;
+    height: 29.5px !important;
+    z-index: 1;
     &:hover {
         border: 1.0px solid $colorHighlightBdr !important;
     }
@@ -406,19 +424,6 @@ input[type="range" i] {
         .settings-navigation-header {
             border-bottom: 0.9px solid $colorBdrSettingsSidebar;
         }
-        .ReactVirtualized__Grid.ReactVirtualized__List {
-            background-color: $colorInputBg;
-            .button-category {
-                margin: 0px;
-                border-radius: 0px;
-                &.category-selected {
-                    background-color: $colorHighlightBdr;
-                }
-                &.spacer {
-                    border-top: 0.9px solid $colorBdrSettingsSidebar;
-                }
-            }
-        }
     }
     .settings-content {
         background-color: var(--colorBg) !important;
@@ -430,6 +435,22 @@ input[type="range" i] {
                     }
                 }
             }
+        }
+    }
+}
+.ReactVirtualized__Grid.ReactVirtualized__List {
+    background-color: $colorInputBg;
+    .button-category {
+        margin: 0px;
+        border-radius: 0px;
+        &.category-selected {
+            background-color: $colorHighlightBdr;
+        }
+        &.spacer {
+            border-top: 0.9px solid $colorBdrSettingsSidebar;
+        }
+        &:hover:not(.category-selected) {
+            background-color: $colorCategoryHover;
         }
     }
 }
@@ -499,9 +520,22 @@ input[type="range" i] {
 }
 
 
-.modal-wrapper {
-    height: 540px !important;
-    .dialog-footer {
-        height: 52.8px !important;
+
+.dialog-content {
+    background: var(--colorBg);
+    .button-toolbar.BookmarkLocationSelector-AddFolderButton {
+    button[name=bookmarkNewFolderButton][title="New Folder"] {
+        border: 1px solid $colorInputBtnBdr;
+        @include button(var(--colorTabBar), var(--colorTabBar), 3px);
+    }
     }
 }
+
+.dialog-footer {
+    height: 52.8px !important;
+}
+
+
+
+
+

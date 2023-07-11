@@ -36,7 +36,7 @@
 }
 
 
-.button-toolbar {
+.button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) {
     .ToolbarButton-Button {
         border: 1.0px solid rgba(0,0,0,0.0) !important;
         @include button(rgba(0,0,0,0.0), rgba(0,0,0,0.0), 3px);
@@ -68,7 +68,7 @@ button[name=PanelBookmarks], button[name=PanelHistory], button[name=PanelNotes] 
         border-radius: 0px;
         &:hover {
             &:not(.OmniLinkItem--Highlighted) {
-                background-color: #243B48;
+                background-color: $colorCategoryHover;
             }
             .OmniLinkItem-EraseButton {
                 @include inner-close-button;
@@ -119,6 +119,37 @@ footer {
         background-color: rgba(0,0,0,0.0) !important;
     }
 
+}
+
+
+
+
+.button-popup {
+    max-height: fit-content;
+    box-shadow: 0 0 0 1px $colorSearchBdr, 0 2px 6px rgba(0, 0, 0, 0.25);
+    .BookmarkPopup {
+        background-color: var(--colorBg);
+        .BookmarkInputField {
+            border-bottom: none !important;
+            &:focus-within {
+                border-bottom: 0px solid transparent!important;
+                box-shadow: none !important;
+            }
+        }
+        .dialog-content {
+            background: var(--colorBg);
+            .BookmarkLocationSelector-AddFolderButton {
+                button[name=bookmarkNewFolderButton] {
+                    border: 1px solid $colorInputBtnBdr;
+                    @include button(var(--colorTabBar), var(--colorTabBar), 3px);
+                }
+            }
+        }
+
+        .dialog-footer {
+            height: 52.8px !important;
+        }
+    }
 }
 
 
