@@ -1,7 +1,12 @@
 # Vivaldi-Breeze-Theme
 
+## Screenshots:
+![alt text](https://github.com/BBFifield/Vivaldi-Breeze-Theme/blob/fe01e88e7822aa1d6d499cf999ff527d75640185/Vivaldi%20Breeze%20Screenshots/speed_dial.png)
+![alt text](https://github.com/BBFifield/Vivaldi-Breeze-Theme/blob/fe01e88e7822aa1d6d499cf999ff527d75640185/Vivaldi%20Breeze%20Screenshots/settings_page.png)
+![alt text](https://github.com/BBFifield/Vivaldi-Breeze-Theme/blob/fe01e88e7822aa1d6d499cf999ff527d75640185/Vivaldi%20Breeze%20Screenshots/bookmarks_popup.png)
+
 ## About:
-* This theme was created so KDE users could experience having an up-to-date chromium-based web browser that looks and feels tightly integrated with the plasma shell when using the default breeze-dark theme in KDE.
+* This theme was created so KDE users could experience having an up-to-date chromium-based web browser that looks and feels tightly integrated within the plasma shell when using the default breeze-dark theme in KDE.
 * The theme was created to closely resemble Breeze-dark from KDE 5.27.6 and tested against Vivaldi 6.1.3035.100.
 
 * To enable this theme, go to vivaldi://experiments/ and check "Allow CSS Modifications". Then head to the Appearance section in Vivaldi settings and choose the root folder of this theme under "CUSTOM UI MODIFICATIONS".
