@@ -156,8 +156,9 @@
 }
 
 .vivaldi-tree {
-    border: 1px solid $colorBdrSettingsSidebar !important;
+    //border: 1px solid $colorBdrSettingsSidebar !important;
     .tree-row {
+        border-radius: 0px !important;
         &[data-selected] {
             background-color: $colorItemInactive;
         }
@@ -201,7 +202,29 @@
 }
 
 .toolbar-default {
-    .button-toolbar {
+    .toolbar-group:not(.toolbar) {
+        .button-toolbar {
+            .ToolbarButton-Button {
+                border: 1.0px solid transparent !important;
+                @include button(transparent, transparent, 3px);
+            }
+        }
+    }
+    &.toolbar {
+        .toolbar-group.toolbar {
+            gap: 2px;
+            hr {
+                all: unset;
+            }
+            .button-toolbar {
+                .ToolbarButton-Button:not(.button-pressed) {
+                    border: 1.0px solid $colorInputBtnBdr !important;
+                    @include button(var(--colorTabBar),var(--colorTabBar) , 3px);
+                }
+            }
+        }
+    }
+    > .button-toolbar {
         .ToolbarButton-Button {
             border: 1.0px solid $colorInputBtnBdr !important;
             @include button(var(--colorTabBar), var(--colorTabBar), 3px);
@@ -438,8 +461,25 @@ input[type="range" i] {
         }
     }
 }
+
+.settings-navigation {
+    > .ReactVirtualized__Grid.ReactVirtualized__List {
+        border: 0px;
+        border-radius: 0px;
+        &:hover {
+            border-color: $colorSearchBdr;
+        }
+    }
+}
+
 .ReactVirtualized__Grid.ReactVirtualized__List {
     background-color: $colorInputBg;
+    border: 1px solid $colorSearchBdr;
+    border-radius: 3px;
+    transition: border 0.1s;
+    &:hover {
+        border-color: var(--colorHighlightBg);
+    }
     .button-category {
         margin: 0px;
         border-radius: 0px;
@@ -524,10 +564,10 @@ input[type="range" i] {
 .dialog-content {
     background: var(--colorBg);
     .button-toolbar.BookmarkLocationSelector-AddFolderButton {
-    button[name=bookmarkNewFolderButton][title="New Folder"] {
-        border: 1px solid $colorInputBtnBdr;
-        @include button(var(--colorTabBar), var(--colorTabBar), 3px);
-    }
+        button[name=bookmarkNewFolderButton][title="New Folder"] {
+            border: 1px solid $colorInputBtnBdr;
+            @include button(var(--colorTabBar), var(--colorTabBar), 3px);
+        }
     }
 }
 
@@ -535,7 +575,26 @@ input[type="range" i] {
     height: 52.8px !important;
 }
 
+.panel {
+    .SlideBar--FullWidth.alternate {
+        border-color: $colorBdrSettingsSidebar !important;
+        &:hover {
+            border-color: var(--colorHighlightBg) !important;
+        }
+    }
+    section.download-editor {
+        overflow-y: auto !important;
+        margin-right: calc(var(--scrollbarWidth) * -1);
 
+        .data.downloads-cardwrapper {
+            max-width: 97%;
+        }
+    }
+}
+
+.download-popout {
+    height: 500px !important;
+}
 
 
 
