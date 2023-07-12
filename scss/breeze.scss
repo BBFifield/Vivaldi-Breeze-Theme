@@ -1,7 +1,30 @@
 @use "mixins" as *;
 @import "variables";
+@import "buttons";
+@import "inputs";
 @import "window_buttons";
-@import "tabs";
+@import "tabbar";
 @import "toolbars";
 @import "inner";
-@import "settings-buttons-icons";
+
+::-webkit-scrollbar-track {
+    margin: 5.5px;
+    &:hover {
+        background-color: $colorScrollBarTrackHvrBg !important;
+        border: 1px solid $colorScrollBarTrackBdr;
+        border-radius: calc(var(--scrollbarWidth) / 2);
+    }
+}
+.theme-dark {
+    ::-webkit-scrollbar-thumb {
+        border:1.0px solid $colorScrollBarBdr !important;
+        background-color: $colorScrollBarBg !important;
+        &:hover {
+            border:1.0px solid $colorHighlightBdr !important;
+            background-color: $colorCkBxOnBg !important;
+        }
+    }
+}
+::-webkit-scrollbar {
+    width: 7.7px;
+}

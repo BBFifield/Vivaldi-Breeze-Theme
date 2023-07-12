@@ -14,37 +14,4 @@
 }
 
 
-@mixin inner-close-button {
-    border-radius: 10px;
-    background-color: $colorCloseBtnBg;
-    fill: var(--colorBg) !important;
 
-    &:hover {
-        background-color: $colorCloseBtnActiveBg;
-        &:active {
-            background-color: $colorCloseBtnActiveHvrBg;
-        }
-    }
-    &:active {
-        background-color: $colorCloseBtnActiveBg;
-    }
-}
-
-@mixin button($colorChangeBg, $colorStagnantBg, $radius) {
-    border-radius: $radius !important;
-    background-color: $colorStagnantBg !important;
-    background-image: none !important;
-    transition: border 0.1s;
-    &:hover {
-        border: 1.0px solid $colorHighlightBdr !important;
-        background-color: $colorChangeBg !important;
-    }
-    &:active {
-        border: 1.0px solid $colorHighlightBdr !important;
-        background-color: $colorChangeBg !important;
-        transition: background-color 0.1s;
-        &:hover {
-            background-color: $colorBtnActiveHvrBg !important;
-        }
-    }
-}

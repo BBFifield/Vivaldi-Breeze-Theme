@@ -1,3 +1,292 @@
+.button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) .ToolbarButton-Button {
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+  border-radius: 3px !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  background-image: none !important;
+  transition: border 0.1s;
+}
+.button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) .ToolbarButton-Button:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) .ToolbarButton-Button:active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  transition: background-color 0.1s;
+}
+.button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) .ToolbarButton-Button:active:hover {
+  background-color: #355D75 !important;
+}
+.button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) .ToolbarButton-Button.button-pressed, .button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) .ToolbarButton-Button.button-pressed:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: #355D75 !important;
+}
+
+.button-show-setting .ToolbarButton-Button, input[type=button]:not(.circular), input[type=submit], .privacy-btn-icon {
+  border: 1px solid #6E7175 !important;
+  border-radius: 3px !important;
+  background-color: var(--colorTabBar) !important;
+  background-image: none !important;
+  transition: border 0.1s;
+}
+.button-show-setting .ToolbarButton-Button:hover, input[type=button]:not(.circular):hover, input[type=submit]:hover, .privacy-btn-icon:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+}
+.button-show-setting .ToolbarButton-Button:active, input[type=button]:not(.circular):active, input[type=submit]:active, .privacy-btn-icon:active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+  transition: background-color 0.1s;
+}
+.button-show-setting .ToolbarButton-Button:active:hover, input[type=button]:not(.circular):active:hover, input[type=submit]:active:hover, .privacy-btn-icon:active:hover {
+  background-color: #355D75 !important;
+}
+
+.close {
+  border-radius: 10px;
+  background-color: #898B8C;
+  fill: var(--colorBg) !important;
+}
+.close:hover {
+  background-color: #823943;
+}
+.close:hover:active {
+  background-color: #A53D49;
+}
+.close:active {
+  background-color: #823943;
+}
+.close svg path {
+  d: path("M 4.6253,12.21839 8,8.84369 l 3.3747,3.3747 h 0.84369 V 11.3747 L 8.84369,8 12.21839,4.6253 V 3.78161 H 11.3747 L 8,7.15631 4.6253,3.78161 H 3.78161 V 4.6253 L 7.15631,8 3.78161,11.3747 v 0.84369 z");
+}
+
+button[title="New Folder"] svg path {
+  d: path("m 0,0 v 1.333332 v 4 V 6.666668 V 14.66668 V 16 H 16 V 14.66668 V 5.333332 V 4 V 2.666668 H 9.333332 L 6.666668,0 V 0 V 0 H 1.333332 Z m 1.333332,1.333332 h 4.8 l1.333336,1.333336 h -0.8 v 0 v 0 L 4,5.333332 H 1.333332 Z m 0,5.333336 H 14.66668 V 14.66668 H 1.333332 Z");
+}
+
+.TabbedView .TabbedView-List button {
+  border: 1px solid #6E7175 !important;
+  border-radius: 3px !important;
+  background-color: var(--colorTabBar) !important;
+  background-image: none !important;
+  transition: border 0.1s;
+}
+.TabbedView .TabbedView-List button:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+}
+.TabbedView .TabbedView-List button:active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+  transition: background-color 0.1s;
+}
+.TabbedView .TabbedView-List button:active:hover {
+  background-color: #355D75 !important;
+}
+
+.toolbar-default .toolbar-group:not(.toolbar) .button-toolbar .ToolbarButton-Button {
+  border: 1px solid transparent !important;
+  border-radius: 3px !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  transition: border 0.1s;
+}
+.toolbar-default .toolbar-group:not(.toolbar) .button-toolbar .ToolbarButton-Button:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: transparent !important;
+}
+.toolbar-default .toolbar-group:not(.toolbar) .button-toolbar .ToolbarButton-Button:active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: transparent !important;
+  transition: background-color 0.1s;
+}
+.toolbar-default .toolbar-group:not(.toolbar) .button-toolbar .ToolbarButton-Button:active:hover {
+  background-color: #355D75 !important;
+}
+.toolbar-default.toolbar .toolbar-group.toolbar {
+  gap: 2px;
+}
+.toolbar-default.toolbar .toolbar-group.toolbar hr {
+  all: unset;
+}
+.toolbar-default.toolbar .toolbar-group.toolbar .button-toolbar .ToolbarButton-Button:not(.button-pressed) {
+  border: 1px solid #6E7175 !important;
+  border-radius: 3px !important;
+  background-color: var(--colorTabBar) !important;
+  background-image: none !important;
+  transition: border 0.1s;
+}
+.toolbar-default.toolbar .toolbar-group.toolbar .button-toolbar .ToolbarButton-Button:not(.button-pressed):hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+}
+.toolbar-default.toolbar .toolbar-group.toolbar .button-toolbar .ToolbarButton-Button:not(.button-pressed):active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+  transition: background-color 0.1s;
+}
+.toolbar-default.toolbar .toolbar-group.toolbar .button-toolbar .ToolbarButton-Button:not(.button-pressed):active:hover {
+  background-color: #355D75 !important;
+}
+.toolbar-default > .button-toolbar .ToolbarButton-Button {
+  border: 1px solid #6E7175 !important;
+  border-radius: 3px !important;
+  background-color: var(--colorTabBar) !important;
+  background-image: none !important;
+  transition: border 0.1s;
+}
+.toolbar-default > .button-toolbar .ToolbarButton-Button:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+}
+.toolbar-default > .button-toolbar .ToolbarButton-Button:active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+  transition: background-color 0.1s;
+}
+.toolbar-default > .button-toolbar .ToolbarButton-Button:active:hover {
+  background-color: #355D75 !important;
+}
+
+.Switch-Button {
+  border: 1px solid #797B7D !important;
+  transition: border 0.1s !important;
+}
+.Switch-Button:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+
+.Switch-Input {
+  border: 1px solid #6E7175 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  transition: border 0.1s !important;
+}
+.Switch-Input:checked {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: #346E8E !important;
+}
+
+input[type=number] {
+  transition: border 0.1s !important;
+}
+input[type=number]:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  transition-duration: 5ms !important;
+}
+input[type=number]:focus-visible {
+  outline: 0px !important;
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+
+input[type=checkbox] {
+  background-image: none !important;
+  background-color: #1B1E20 !important;
+  border: 1px solid #6E7175 !important;
+  transition: border 0.1s !important;
+}
+input[type=checkbox]:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  transition-duration: 5ms !important;
+}
+input[type=checkbox]:active {
+  filter: none !important;
+}
+input[type=checkbox]:checked {
+  background-color: #2D546B !important;
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+input[type=checkbox]:checked:before {
+  background-color: var(--colorFg) !important;
+  transform: rotate(-45deg) translateY(42%) translateX(-28%) scaleX(0.15) scaleY(0.35) !important;
+}
+input[type=checkbox]:checked:after {
+  background-color: var(--colorFg) !important;
+  transform: rotate(225deg) translateY(-28%) translateX(-90%) scaleX(0.16) scaleY(0.72) !important;
+  transition-duration: 5ms !important;
+}
+
+input[type=radio] {
+  background-image: none !important;
+  background-color: #1B1E20 !important;
+  border: 1px solid #5F6265 !important;
+}
+input[type=radio]:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+input[type=radio]:active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+input[type=radio]:checked, input[type=radio]:checked:active {
+  background-color: var(--colorFg) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, inset 0 0 0 4px #355D75 !important;
+  transition: none !important;
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+
+input[type=search], input[type=text]:not(#urlFieldInput):not([id^=react-select-]) {
+  height: 29.5px;
+  border-radius: 2px;
+  border: 1px solid #5F6265 !important;
+  background-color: #1B1E20 !important;
+  transition: border 0.1s;
+}
+input[type=search]:focus-within, input[type=search]:hover, input[type=text]:not(#urlFieldInput):not([id^=react-select-]):focus-within, input[type=text]:not(#urlFieldInput):not([id^=react-select-]):hover {
+  outline: 0px !important;
+  border-color: var(--colorHighlightBg) !important;
+}
+
+select {
+  border: 1px solid #6E7175 !important;
+  background-color: var(--colorTabBar) !important;
+  height: 29.5px !important;
+  z-index: 1;
+}
+select:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+select:active, select:focus-visible {
+  outline: 0px !important;
+  background-color: #355D75 !important;
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+select:not([multiple]):not([size]), select input[type=date] {
+  background-image: url("downarrow.png");
+  background-size: 15.2px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+input[type=date] {
+  background-image: url("whitearrow.png");
+  background-size: 15.2px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+input[type=range] {
+  background-color: #346E8E;
+  border: 1px solid var(--colorHighlightBg);
+  border-radius: 12px;
+  height: 6px;
+}
+input[type=range]:disabled {
+  border-color: #1F485E;
+  background-color: #243B48;
+  opacity: 1;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 1px solid #7E8083;
+  height: 18px;
+  width: 18px;
+  transition: border-color 0.15s;
+}
+input[type=range]::-webkit-slider-thumb:hover, input[type=range]::-webkit-slider-thumb:active {
+  border: 1px solid var(--colorHighlightBg);
+}
+
 /*
  A: In order to have window shade you also need to:
       1. setup a kwin window rule to setting "Window class"="vivaldi-stable" and "No titlebar and frame"="Force No"
@@ -120,30 +409,37 @@
   border-radius: 0px 3px 0px 0px !important;
 }
 
-.close {
-  border-radius: 10px;
-  background-color: #898B8C;
-  fill: var(--colorBg) !important;
-}
-.close:hover {
-  background-color: #823943;
-}
-.close:hover:active {
-  background-color: #A53D49;
-}
-.close:active {
-  background-color: #823943;
-}
-.close svg path {
-  d: path("M 4.6253,12.21839 8,8.84369 l 3.3747,3.3747 h 0.84369 V 11.3747 L 8.84369,8 12.21839,4.6253 V 3.78161 H 11.3747 L 8,7.15631 4.6253,3.78161 H 3.78161 V 4.6253 L 7.15631,8 3.78161,11.3747 v 0.84369 z");
-}
-
 .newtab {
   margin: 3.5px 0px 0px 2px;
 }
 .newtab button svg path {
   transform: matrix(1.0666667, 0, 0, 1.0666667, 2.7999999, 1.7333332);
   d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
+}
+
+.synced-tabs-button svg path {
+  d: path("M 13.357606,6.9301109 A 5.7852868,5.7856295 0 0 0 7.5723281,12.715738 a 5.7852868,5.7856295 0 0 0 0,0.771436 a 3.8568577,3.8570869 0 0 0 -2.5712399,3.728501 a 3.8568577,3.8570869 0 0 0 3.8568578,3.857082 h 9.642166 a 4.4996681,4.4999328 0 0 0 4.499652,-4.499946 a 4.4996681,4.4999328 0 0 0 -3.856858,-4.499907 a 5.7852868,5.7856295 0 0 0 -5.7853,-5.1427931 z m 0,1.2856963 a 4.4996681,4.4999328 0 0 1 4.499663,4.4999308 a 4.4996681,4.4999328 0 0 1 0,0.64284 a 3.2140462,3.2142376 0 0 1 0.642843,0 a 3.2140462,3.2142376 0 0 1 3.214018,3.214233 a 3.2140462,3.2142376 0 0 1 -3.214018,3.214252 H 8.857946 A 2.5712393,2.571391 0 0 1 6.2867114,17.215675 A 2.5712393,2.571391 0 0 1 8.857946,14.644279 a 2.5712393,2.571391 0 0 1 0.514251,0 A 4.4996681,4.4999328 0 0 1 8.857946,12.715738 a 4.4996681,4.4999328 0 0 1 4.49966,-4.4999308 z");
+}
+
+.toggle-trash svg path:nth-child(1) {
+  d: path("m 11.5,6.5 v 1.25 h -5 V 9 h 1.25 c -2.6722672,0.00579 1.0622417,0.00173 2.1093747,-5.2e-6 C 6.5433434,9.0010117 11.665926,8.9990207 12.749997,9 V 7.75 h 2.5 V 9 H 16.5 c 0.583917,-0.00356 1.311978,0.00408 1.488289,9e-6 C 21.112044,8.996881 20.211674,9.0000852 21.5,9 V 7.75 h -5 V 6.5 Z");
+  stroke-width: 0.02;
+  fill: currentcolor;
+}
+.toggle-trash svg path:nth-child(2) {
+  d: path("M 19,9 V 20.25 H 9 V 9 C 8.2295945,8.9999417 8.7320423,9.0109214 7.75,9 V 21.5 H 9 H 20.25 V 20.25 V 9 c -0.689196,0.00299 -0.739251,0.00103 -1.25,0 z");
+}
+.toggle-trash svg line:nth-child(3) {
+  opacity: 1;
+  stroke: currentcolor;
+  stroke-width: 1.2;
+  stroke-linecap: unset;
+}
+.toggle-trash svg line:nth-child(4) {
+  opacity: 1;
+  stroke: currentcolor;
+  stroke-width: 1.2;
+  stroke-linecap: unset;
 }
 
 .mainbar .toolbar-mainbar {
@@ -184,30 +480,6 @@
   background-color: var(--colorBg);
 }
 
-.button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) .ToolbarButton-Button {
-  border: 1px solid rgba(0, 0, 0, 0) !important;
-  border-radius: 3px !important;
-  background-color: rgba(0, 0, 0, 0) !important;
-  background-image: none !important;
-  transition: border 0.1s;
-}
-.button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) .ToolbarButton-Button:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: rgba(0, 0, 0, 0) !important;
-}
-.button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) .ToolbarButton-Button:active {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: rgba(0, 0, 0, 0) !important;
-  transition: background-color 0.1s;
-}
-.button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) .ToolbarButton-Button:active:hover {
-  background-color: #355D75 !important;
-}
-.button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) .ToolbarButton-Button.button-pressed, .button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) .ToolbarButton-Button.button-pressed:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: #355D75 !important;
-}
-
 button[name=PanelBookmarks], button[name=PanelHistory], button[name=PanelNotes] {
   padding-right: 5px;
 }
@@ -226,9 +498,6 @@ button[name=PanelBookmarks], button[name=PanelHistory], button[name=PanelNotes] 
   --item-height: 29px;
   border-radius: 0px;
 }
-.OmniDropdown .Omni-Dropdown-Label:hover:not(.OmniLinkItem--Highlighted), .OmniDropdown .omni-clickable:hover:not(.OmniLinkItem--Highlighted) {
-  background-color: #25495C;
-}
 .OmniDropdown .Omni-Dropdown-Label:hover .OmniLinkItem-EraseButton, .OmniDropdown .omni-clickable:hover .OmniLinkItem-EraseButton {
   border-radius: 10px;
   background-color: #898B8C;
@@ -245,6 +514,9 @@ button[name=PanelBookmarks], button[name=PanelHistory], button[name=PanelNotes] 
 }
 .OmniDropdown .Omni-Dropdown-Label:hover .OmniLinkItem-EraseButton svg path, .OmniDropdown .omni-clickable:hover .OmniLinkItem-EraseButton svg path {
   d: path("M 4.6253,12.21839 8,8.84369 l 3.3747,3.3747 h 0.84369 V 11.3747 L 8.84369,8 12.21839,4.6253 V 3.78161 H 11.3747 L 8,7.15631 4.6253,3.78161 H 3.78161 V 4.6253 L 7.15631,8 3.78161,11.3747 v 0.84369 z");
+}
+.OmniDropdown .Omni-Dropdown-Label:hover:not(.OmniLinkItem--Highlighted), .OmniDropdown .omni-clickable:hover:not(.OmniLinkItem--Highlighted) {
+  background-color: #25495C;
 }
 .OmniDropdown .OmniLinkItem--Highlighted .OmniLinkItem-EraseButton svg path {
   d: path("m 0 0");
@@ -274,6 +546,9 @@ footer {
 footer .toolbar-statusbar {
   height: 33px !important;
 }
+footer .toolbar-statusbar button {
+  padding-right: 5px;
+}
 footer:after {
   bottom: 34px !important;
   background-color: rgba(0, 0, 0, 0) !important;
@@ -282,6 +557,9 @@ footer:after {
 .button-popup {
   max-height: fit-content;
   box-shadow: 0 0 0 1px #5F6265, 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+.button-popup.download-popout {
+  height: 500px !important;
 }
 .button-popup .BookmarkPopup {
   background-color: var(--colorBg);
@@ -292,617 +570,6 @@ footer:after {
 .button-popup .BookmarkPopup .BookmarkInputField:focus-within {
   border-bottom: 0px solid transparent !important;
   box-shadow: none !important;
-}
-.button-popup .BookmarkPopup .dialog-content {
-  background: var(--colorBg);
-}
-.button-popup .BookmarkPopup .dialog-content .BookmarkLocationSelector-AddFolderButton button[name=bookmarkNewFolderButton] {
-  border: 1px solid #6E7175;
-  border-radius: 3px !important;
-  background-color: var(--colorTabBar) !important;
-  background-image: none !important;
-  transition: border 0.1s;
-}
-.button-popup .BookmarkPopup .dialog-content .BookmarkLocationSelector-AddFolderButton button[name=bookmarkNewFolderButton]:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: var(--colorTabBar) !important;
-}
-.button-popup .BookmarkPopup .dialog-content .BookmarkLocationSelector-AddFolderButton button[name=bookmarkNewFolderButton]:active {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: var(--colorTabBar) !important;
-  transition: background-color 0.1s;
-}
-.button-popup .BookmarkPopup .dialog-content .BookmarkLocationSelector-AddFolderButton button[name=bookmarkNewFolderButton]:active:hover {
-  background-color: #355D75 !important;
-}
-.button-popup .BookmarkPopup .dialog-footer {
-  height: 52.8px !important;
-}
-
-.settings-content h2 {
-  border-bottom: 1px solid #454B50 !important;
-}
-.settings-content .keystrokes {
-  border: 1px solid #454B50 !important;
-  border-radius: 3px;
-}
-.settings-content .keystrokes .category.hide {
-  background-color: #1B1E20;
-}
-.settings-content .keystrokes .category.hide button:after {
-  -webkit-mask-image: url(downarrow_cropped.png);
-  transform: rotate(-90deg);
-  transition: transform 100ms linear;
-  -webkit-mask-size: cover;
-  -webkit-mask-position: 0px;
-  width: 16px;
-  height: 8.5px;
-  top: 14px;
-}
-.settings-content .keystrokes .category.hide:hover {
-  background-color: #25495C;
-}
-.settings-content .keystrokes .category.show button {
-  background-color: #355D75;
-  border: 1px solid var(--colorHighlightBg);
-}
-.settings-content .keystrokes .category.show button:after {
-  -webkit-mask-image: url(downarrow_cropped.png);
-  transition: transform 100ms linear;
-  -webkit-mask-size: cover;
-  -webkit-mask-position: 0px;
-  width: 16px;
-  height: 8.5px;
-  top: 14px;
-}
-.settings-content .keystrokes .category.show .multiinput {
-  border: none;
-  outline: none;
-}
-.settings-content .keystrokes .category.show .circular.clearkey {
-  -webkit-mask-image: url(window-close-symbolic.png);
-}
-.settings-content .keystrokes .category.show .circular.restorekey {
-  -webkit-mask-image: url(view-refresh-symbolic.png);
-}
-
-.gesture-map.setting-single select {
-  height: 200px !important;
-}
-
-.Inner__control {
-  border: 1px solid #6E7175 !important;
-  background-color: var(--colorTabBar) !important;
-  height: 29.5px !important;
-}
-.Inner__control:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-}
-.Inner__control:active, .Inner__control:focus-within {
-  outline: 0px !important;
-  background-color: #355D75 !important;
-  border: 1px solid var(--colorHighlightBg) !important;
-}
-.Inner__control .Inner__indicator {
-  background-image: url("downarrow.png") !important;
-  background-size: 15.2px !important;
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-.Inner__control .Inner__input input[id^=react-select-] {
-  background-color: transparent !important;
-  border: none !important;
-}
-
-.master-detail {
-  border: 1px solid #454B50 !important;
-  border-radius: 3px !important;
-}
-.master-detail .master-items {
-  border: 0px !important;
-  background-color: #1B1E20 !important;
-  background-image: none !important;
-}
-.master-detail .master-items .item.item-selected {
-  background-color: #1F485E;
-}
-.master-detail .master-items .item:hover:not(.item-selected) {
-  background-color: #25495C;
-}
-.master-detail .master-toolbar {
-  border: 1px solid rgba(0, 0, 0, 0) !important;
-  border-top: 1px solid #454B50 !important;
-}
-.master-detail .master-toolbar select.button-toolbar {
-  z-index: 0;
-  background-image: url(downarrow_cropped.png);
-  background-size: 12px;
-  background-position: center !important;
-  border-radius: 0px !important;
-}
-.master-detail .master-toolbar button.button-toolbar {
-  border: 1px solid rgba(0, 0, 0, 0) !important;
-  border-radius: 0px !important;
-  background-color: #2E3236 !important;
-  background-image: none !important;
-  transition: border 0.1s;
-}
-.master-detail .master-toolbar button.button-toolbar:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: #2E3236 !important;
-}
-.master-detail .master-toolbar button.button-toolbar:active {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: #2E3236 !important;
-  transition: background-color 0.1s;
-}
-.master-detail .master-toolbar button.button-toolbar:active:hover {
-  background-color: #355D75 !important;
-}
-.master-detail .master-toolbar button.button-toolbar:nth-of-type(1) svg path {
-  transform: matrix(0.8, 0, 0, 0.8, -0.4, -1.2);
-  d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
-}
-.master-detail .master-toolbar button.button-toolbar:nth-of-type(2) svg path {
-  d: path("m 2,7.4550779 v 1.0878907 c 4.115672,-6.105e-4 7.9252791,2e-7 12,2e-7 V 7.4550781 c -4.0648358,-5.603e-4 -7.9623522,-2e-7 -12,-2e-7 z");
-}
-.master-detail .master-toolbar button.button-toolbar:nth-of-type(3) svg path {
-  d: path("m 8,4.647 l -6,6 l 0.707,0.707 L 8,6.061 l 5.293,5.293 L 14,10.647 Z");
-}
-.master-detail .master-toolbar button.button-toolbar:nth-of-type(4) svg path {
-  d: path("m 8,11.353 l -6,-6 L 2.707,4.646 L 8,9.939 L 13.293,4.646 L 14,5.353 Z");
-}
-.master-detail .master-layout-single {
-  border: 1px solid rgba(0, 0, 0, 0) !important;
-  border-right: 1px solid #454B50 !important;
-}
-.master-detail .detail {
-  border: 1px solid rgba(0, 0, 0, 0);
-}
-
-.vivaldi-tree .tree-row {
-  border-radius: 0px !important;
-}
-.vivaldi-tree .tree-row[data-selected] {
-  background-color: #1F485E;
-}
-.vivaldi-tree .tree-row:hover:not([data-selected]) {
-  background-color: #25495C;
-}
-
-.TabbedView {
-  border: 1px solid #454B50;
-  background-color: #1B1E20;
-}
-.TabbedView .TabbedView-List {
-  border: 1px solid #454B50;
-  background-color: #26292d;
-}
-.TabbedView .TabbedView-List button {
-  border: 1px solid #6E7175 !important;
-  border-radius: 3px !important;
-  background-color: var(--colorTabBar) !important;
-  background-image: none !important;
-  transition: border 0.1s;
-}
-.TabbedView .TabbedView-List button:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: var(--colorTabBar) !important;
-}
-.TabbedView .TabbedView-List button:active {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: var(--colorTabBar) !important;
-  transition: background-color 0.1s;
-}
-.TabbedView .TabbedView-List button:active:hover {
-  background-color: #355D75 !important;
-}
-.TabbedView .TabbedView-Content .ThemeEditorColorPicker-ColorInput {
-  border: 1px solid #454B50;
-}
-.TabbedView .TabbedView-Content .TabbedView-Footer {
-  border-top: 1px solid #454B50;
-}
-.TabbedView .TabbedView-Content .Button-Manager select {
-  height: 82px !important;
-}
-.TabbedView .TabbedView-Content .sortselector.sortselector-tableheader {
-  background-color: var(--colorAccentBg);
-  border: none;
-}
-
-.toolbar-default .toolbar-group:not(.toolbar) .button-toolbar .ToolbarButton-Button {
-  border: 1px solid transparent !important;
-  border-radius: 3px !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  transition: border 0.1s;
-}
-.toolbar-default .toolbar-group:not(.toolbar) .button-toolbar .ToolbarButton-Button:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: transparent !important;
-}
-.toolbar-default .toolbar-group:not(.toolbar) .button-toolbar .ToolbarButton-Button:active {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: transparent !important;
-  transition: background-color 0.1s;
-}
-.toolbar-default .toolbar-group:not(.toolbar) .button-toolbar .ToolbarButton-Button:active:hover {
-  background-color: #355D75 !important;
-}
-.toolbar-default.toolbar .toolbar-group.toolbar {
-  gap: 2px;
-}
-.toolbar-default.toolbar .toolbar-group.toolbar hr {
-  all: unset;
-}
-.toolbar-default.toolbar .toolbar-group.toolbar .button-toolbar .ToolbarButton-Button:not(.button-pressed) {
-  border: 1px solid #6E7175 !important;
-  border-radius: 3px !important;
-  background-color: var(--colorTabBar) !important;
-  background-image: none !important;
-  transition: border 0.1s;
-}
-.toolbar-default.toolbar .toolbar-group.toolbar .button-toolbar .ToolbarButton-Button:not(.button-pressed):hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: var(--colorTabBar) !important;
-}
-.toolbar-default.toolbar .toolbar-group.toolbar .button-toolbar .ToolbarButton-Button:not(.button-pressed):active {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: var(--colorTabBar) !important;
-  transition: background-color 0.1s;
-}
-.toolbar-default.toolbar .toolbar-group.toolbar .button-toolbar .ToolbarButton-Button:not(.button-pressed):active:hover {
-  background-color: #355D75 !important;
-}
-.toolbar-default > .button-toolbar .ToolbarButton-Button {
-  border: 1px solid #6E7175 !important;
-  border-radius: 3px !important;
-  background-color: var(--colorTabBar) !important;
-  background-image: none !important;
-  transition: border 0.1s;
-}
-.toolbar-default > .button-toolbar .ToolbarButton-Button:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: var(--colorTabBar) !important;
-}
-.toolbar-default > .button-toolbar .ToolbarButton-Button:active {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: var(--colorTabBar) !important;
-  transition: background-color 0.1s;
-}
-.toolbar-default > .button-toolbar .ToolbarButton-Button:active:hover {
-  background-color: #355D75 !important;
-}
-
-.button-show-setting .ToolbarButton-Button, input[type=button]:not(.circular), input[type=submit], .privacy-btn-icon {
-  border: 1px solid #6E7175 !important;
-  border-radius: 3px !important;
-  background-color: var(--colorTabBar) !important;
-  background-image: none !important;
-  transition: border 0.1s;
-}
-.button-show-setting .ToolbarButton-Button:hover, input[type=button]:not(.circular):hover, input[type=submit]:hover, .privacy-btn-icon:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: var(--colorTabBar) !important;
-}
-.button-show-setting .ToolbarButton-Button:active, input[type=button]:not(.circular):active, input[type=submit]:active, .privacy-btn-icon:active {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: var(--colorTabBar) !important;
-  transition: background-color 0.1s;
-}
-.button-show-setting .ToolbarButton-Button:active:hover, input[type=button]:not(.circular):active:hover, input[type=submit]:active:hover, .privacy-btn-icon:active:hover {
-  background-color: #355D75 !important;
-}
-
-button[title="New Folder"] svg path {
-  d: path("m 0,0 v 1.333332 v 4 V 6.666668 V 14.66668 V 16 H 16 V 14.66668 V 5.333332 V 4 V 2.666668 H 9.333332 L 6.666668,0 V 0 V 0 H 1.333332 Z m 1.333332,1.333332 h 4.8 l1.333336,1.333336 h -0.8 v 0 v 0 L 4,5.333332 H 1.333332 Z m 0,5.333336 H 14.66668 V 14.66668 H 1.333332 Z");
-}
-
-.synced-tabs-button svg path {
-  d: path("M 13.357606,6.9301109 A 5.7852868,5.7856295 0 0 0 7.5723281,12.715738 a 5.7852868,5.7856295 0 0 0 0,0.771436 a 3.8568577,3.8570869 0 0 0 -2.5712399,3.728501 a 3.8568577,3.8570869 0 0 0 3.8568578,3.857082 h 9.642166 a 4.4996681,4.4999328 0 0 0 4.499652,-4.499946 a 4.4996681,4.4999328 0 0 0 -3.856858,-4.499907 a 5.7852868,5.7856295 0 0 0 -5.7853,-5.1427931 z m 0,1.2856963 a 4.4996681,4.4999328 0 0 1 4.499663,4.4999308 a 4.4996681,4.4999328 0 0 1 0,0.64284 a 3.2140462,3.2142376 0 0 1 0.642843,0 a 3.2140462,3.2142376 0 0 1 3.214018,3.214233 a 3.2140462,3.2142376 0 0 1 -3.214018,3.214252 H 8.857946 A 2.5712393,2.571391 0 0 1 6.2867114,17.215675 A 2.5712393,2.571391 0 0 1 8.857946,14.644279 a 2.5712393,2.571391 0 0 1 0.514251,0 A 4.4996681,4.4999328 0 0 1 8.857946,12.715738 a 4.4996681,4.4999328 0 0 1 4.49966,-4.4999308 z");
-}
-
-.toggle-trash svg path:nth-child(1) {
-  d: path("m 11.5,6.5 v 1.25 h -5 V 9 h 1.25 c -2.6722672,0.00579 1.0622417,0.00173 2.1093747,-5.2e-6 C 6.5433434,9.0010117 11.665926,8.9990207 12.749997,9 V 7.75 h 2.5 V 9 H 16.5 c 0.583917,-0.00356 1.311978,0.00408 1.488289,9e-6 C 21.112044,8.996881 20.211674,9.0000852 21.5,9 V 7.75 h -5 V 6.5 Z");
-  stroke-width: 0.02;
-  fill: currentcolor;
-}
-.toggle-trash svg path:nth-child(2) {
-  d: path("M 19,9 V 20.25 H 9 V 9 C 8.2295945,8.9999417 8.7320423,9.0109214 7.75,9 V 21.5 H 9 H 20.25 V 20.25 V 9 c -0.689196,0.00299 -0.739251,0.00103 -1.25,0 z");
-}
-.toggle-trash svg line:nth-child(3) {
-  opacity: 1;
-  stroke: currentcolor;
-  stroke-width: 1.2;
-  stroke-linecap: unset;
-}
-.toggle-trash svg line:nth-child(4) {
-  opacity: 1;
-  stroke: currentcolor;
-  stroke-width: 1.2;
-  stroke-linecap: unset;
-}
-
-.button-startpage.add-set svg path {
-  d: path("M 7.2727258,0 V 7.262919 H 0 V 8.71436 H 7.2727258 V 16 H 8.72727 V 8.71436 H 16 V 7.262919 H 8.72727 V 0 Z");
-}
-
-.circular.update-thumbnail svg path {
-  d: path("m 14,8 c 0,1.1088173 -0.319333,2.140071 -0.84375,3.03125 l -2.6875,-2.6875 L 11.1875,7.625 l 1.625,1.625 c 0.05109,-0.19534 0.09772,-0.3898623 0.125,-0.59375 C 12.945289,8.6038437 12.962684,8.5529713 12.96875,8.5 C 12.98582,8.3319146 13,8.172589 13,8 C 13,5.238576 10.761424,3 8,3 C 7.756976,3 7.5144918,3.02845 7.28125,3.0625 C 7.1450007,3.082455 7.0074468,3.094286 6.875,3.125 C 6.5884185,3.19195 6.327376,3.291647 6.0625,3.40625 C 6.031825,3.419522 5.999101,3.423626 5.96875,3.4375 c -0.09166,0.040961 -0.163333,0.108255 -0.25,0.15625 c -0.008,0.00445 -0.02305,-0.00433 -0.03125,0 l -0.71875,-0.75 C 5.859929,2.319333 6.891182,2 8,2 c 3.313709,0 6,2.686293 6,6 z m -2.96875,5.15625 C 10.140071,13.680667 9.108818,14 8,14 C 4.686291,14 2,11.313707 2,8 C 2,6.8911827 2.319333,5.859929 2.84375,4.96875 l 0.75,0.75 L 5.5,7.65625 L 4.8125,8.34375 L 3.1875,6.75 C 3.13641,6.94534 3.08978,7.1398623 3.0625,7.34375 C 3.0547,7.396156 3.03732,7.4470287 3.03125,7.5 C 3.01418,7.6680854 3,7.827411 3,8 C 3,8.172589 3.01418,8.3319146 3.03125,8.5 C 3.04832,8.6680853 3.060448,8.837256 3.09375,9 C 3.559981,11.278415 5.583754,13 8,13 c 0.2482626,0 0.4801862,-0.02756 0.71875,-0.0625 C 8.8549993,12.91755 8.9925532,12.90571 9.125,12.875 c 0.2865815,-0.06695 0.547624,-0.166647 0.8125,-0.28125 c 0.030718,-0.01299 0.063349,-0.01766 0.09375,-0.03125 c 0.08886,-0.04062 0.164735,-0.108612 0.25,-0.15625 h 0.03125 z");
-}
-.circular.set-custom-thumbnail svg path {
-  transform: matrix(0.8, 0, 0, 0.8, -0.4, -1.2);
-  d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
-}
-.circular.close svg path {
-  fill: var(--colorFg);
-  transform: matrix(1.6666667, 0, 0, 1.6666667, -5.3333335, -5.3333335);
-  d: path("M 5.7070312,5 L 5,5.7070312 L 7.2929688,8 L 5,10.292969 L 5.7070312,11 L 8,8.7070312 L 10.292969,11 L 11,10.292969 L 8.7070312,8 L 11,5.7070312 L 10.292969,5 L 8,7.2929688 Z");
-}
-
-.SpeedDialView-Settings-Button path, .button-toolbar.button-show-setting path {
-  d: path("M 10.666667,0 C 9.424024,0 8.379283,0.849734 8.083332,2 H 0 V 3.3333333 H 8.083332 C 8.379283,4.4835993 9.424024,5.3333333 10.666667,5.3333333 C 11.909302,5.3333333 12.954056,4.4835993 13.249994,3.3333333 H 16 V 2 H 13.249994 C 12.954056,0.849734 11.909302,0 10.666667,0 Z M 4,9.333336 C 2.7573591,9.333336 1.7126172,10.183062 1.4166667,11.333333 H 0 V 12.666667 H 1.4166667 C 1.7126172,13.816938 2.7573591,14.666667 4,14.666667 C 5.2426409,14.666667 6.2873828,13.816938 6.5833333,12.666667 H 6.6666667 H 9.333334 H 16 V 11.333333 H 9.333334 H 6.6666667 H 6.5833333 C 6.2873828,10.183062 5.2426409,9.333336 4,9.333336 Z M 4,10.666667 C 4.7363733,10.666667 5.3333333,11.263627 5.3333333,12 C 5.3333333,12.736373 4.7363733,13.333333 4,13.333333 C 3.2636267,13.333333 2.6666667,12.736373 2.6666667,12 C 2.6666667,11.263627 3.2636267,10.666667 4,10.666667 Z");
-}
-
-.Switch-Button {
-  border: 1px solid #797B7D !important;
-  transition: border 0.1s !important;
-}
-.Switch-Button:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-}
-
-.Switch-Input {
-  border: 1px solid #6E7175 !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  transition: border 0.1s !important;
-}
-.Switch-Input:checked {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: #346E8E !important;
-}
-
-input[type=number] {
-  transition: border 0.1s !important;
-}
-input[type=number]:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  transition-duration: 5ms !important;
-}
-input[type=number]:focus-visible {
-  outline: 0px !important;
-  border: 1px solid var(--colorHighlightBg) !important;
-}
-
-input[type=checkbox] {
-  background-image: none !important;
-  background-color: #1B1E20 !important;
-  border: 1px solid #6E7175 !important;
-  transition: border 0.1s !important;
-}
-input[type=checkbox]:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  transition-duration: 5ms !important;
-}
-input[type=checkbox]:active {
-  filter: none !important;
-}
-input[type=checkbox]:checked {
-  background-color: #2D546B !important;
-  border: 1px solid var(--colorHighlightBg) !important;
-}
-input[type=checkbox]:checked:before {
-  background-color: var(--colorFg) !important;
-  transform: rotate(-45deg) translateY(42%) translateX(-28%) scaleX(0.15) scaleY(0.35) !important;
-}
-input[type=checkbox]:checked:after {
-  background-color: var(--colorFg) !important;
-  transform: rotate(225deg) translateY(-28%) translateX(-90%) scaleX(0.16) scaleY(0.72) !important;
-  transition-duration: 5ms !important;
-}
-
-input[type=radio] {
-  background-image: none !important;
-  background-color: #1B1E20 !important;
-  border: 1px solid #5F6265 !important;
-}
-input[type=radio]:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-}
-input[type=radio]:active {
-  border: 1px solid var(--colorHighlightBg) !important;
-  box-shadow: none !important;
-  filter: none !important;
-}
-input[type=radio]:checked, input[type=radio]:checked:active {
-  background-color: var(--colorFg) !important;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, inset 0 0 0 4px #355D75 !important;
-  transition: none !important;
-  border: 1px solid var(--colorHighlightBg) !important;
-}
-
-input[type=search], input[type=text]:not(#urlFieldInput):not([id^=react-select-]) {
-  height: 29.5px;
-  border-radius: 2px;
-  border: 1px solid #5F6265 !important;
-  background-color: #1B1E20 !important;
-  transition: border 0.1s;
-}
-input[type=search]:focus-within, input[type=search]:hover, input[type=text]:not(#urlFieldInput):not([id^=react-select-]):focus-within, input[type=text]:not(#urlFieldInput):not([id^=react-select-]):hover {
-  outline: 0px !important;
-  border-color: var(--colorHighlightBg) !important;
-}
-
-select {
-  border: 1px solid #6E7175 !important;
-  background-color: var(--colorTabBar) !important;
-  height: 29.5px !important;
-  z-index: 1;
-}
-select:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-}
-select:active, select:focus-visible {
-  outline: 0px !important;
-  background-color: #355D75 !important;
-  border: 1px solid var(--colorHighlightBg) !important;
-}
-select:not([multiple]):not([size]), select input[type=date] {
-  background-image: url("downarrow.png");
-  background-size: 15.2px;
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-
-input[type=date] {
-  background-image: url("whitearrow.png");
-  background-size: 15.2px;
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-
-input[type=range i] {
-  background-color: #346E8E;
-  border: 1px solid var(--colorHighlightBg);
-  border-radius: 12px;
-  height: 6px;
-}
-input[type=range i]:disabled {
-  border-color: #1F485E;
-  background-color: #243B48;
-  opacity: 1;
-}
-input[type=range i]::-webkit-slider-thumb {
-  border: 1px solid #7E8083;
-  height: 18px;
-  width: 18px;
-  transition: border-color 0.15s;
-}
-input[type=range i]::-webkit-slider-thumb:hover, input[type=range i]::-webkit-slider-thumb:active {
-  border: 1px solid var(--colorHighlightBg);
-}
-
-.vivaldi-settings .settings-sidebar {
-  box-shadow: none;
-  border-right: 0.9px solid #454B50;
-}
-.vivaldi-settings .settings-sidebar .settings-navigation-header {
-  border-bottom: 0.9px solid #454B50;
-}
-.vivaldi-settings .settings-content {
-  background-color: var(--colorBg) !important;
-}
-.vivaldi-settings .settings-content .tree-row.folder .expand-icon svg path {
-  d: path("M 7.5,4.9730007 L 3.0270617,9.446 L 2.5,8.9189402 L 6.445881,4.9730007 L 2.5,1.0270688 L 3.0270617,0.5 Z");
-}
-
-.settings-navigation > .ReactVirtualized__Grid.ReactVirtualized__List {
-  border: 0px;
-  border-radius: 0px;
-}
-.settings-navigation > .ReactVirtualized__Grid.ReactVirtualized__List:hover {
-  border-color: #5F6265;
-}
-
-.ReactVirtualized__Grid.ReactVirtualized__List {
-  background-color: #1B1E20;
-  border: 1px solid #5F6265;
-  border-radius: 3px;
-  transition: border 0.1s;
-}
-.ReactVirtualized__Grid.ReactVirtualized__List:hover {
-  border-color: var(--colorHighlightBg);
-}
-.ReactVirtualized__Grid.ReactVirtualized__List .button-category {
-  margin: 0px;
-  border-radius: 0px;
-}
-.ReactVirtualized__Grid.ReactVirtualized__List .button-category.category-selected {
-  background-color: var(--colorHighlightBg);
-}
-.ReactVirtualized__Grid.ReactVirtualized__List .button-category.spacer {
-  border-top: 0.9px solid #454B50;
-}
-.ReactVirtualized__Grid.ReactVirtualized__List .button-category:hover:not(.category-selected) {
-  background-color: #25495C;
-}
-
-::-webkit-scrollbar-track {
-  margin: 5.5px;
-}
-::-webkit-scrollbar-track:hover {
-  background-color: #313436 !important;
-  border: 1px solid #595C5D;
-  border-radius: calc(var(--scrollbarWidth) / 2);
-}
-
-.theme-dark ::-webkit-scrollbar-thumb {
-  border: 1px solid #797B7D !important;
-  background-color: #424546 !important;
-}
-.theme-dark ::-webkit-scrollbar-thumb:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: #2D546B !important;
-}
-
-::-webkit-scrollbar {
-  width: 7.7px;
-}
-
-#browser #webpage-stack nav.startpage-navigation {
-  background-color: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(20px);
-}
-#browser #webpage-stack nav.startpage-navigation .startpage-navigation-group:last-of-type {
-  border-left-width: 0;
-}
-#browser #webpage-stack .dial {
-  background-color: rgba(255, 255, 255, 0.75) !important;
-  backdrop-filter: blur(10px);
-  transition: all 100ms ease;
-  border: 2px solid transparent;
-}
-#browser #webpage-stack .dial:hover {
-  margin-top: 0;
-  border: 2px solid var(--colorHighlightBg);
-  box-shadow: 0px 0px 6px 1px var(--colorHighlightBg);
-}
-#browser.theme-dark #webpage-stack nav.startpage-navigation {
-  background-color: rgba(42, 46, 50, 0.75);
-  color: #fff;
-}
-#browser.theme-dark #webpage-stack .dial {
-  background-color: rgba(42, 46, 50, 0.75) !important;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.dialog-content {
-  background: var(--colorBg);
-}
-.dialog-content .button-toolbar.BookmarkLocationSelector-AddFolderButton button[name=bookmarkNewFolderButton][title="New Folder"] {
-  border: 1px solid #6E7175;
-  border-radius: 3px !important;
-  background-color: var(--colorTabBar) !important;
-  background-image: none !important;
-  transition: border 0.1s;
-}
-.dialog-content .button-toolbar.BookmarkLocationSelector-AddFolderButton button[name=bookmarkNewFolderButton][title="New Folder"]:hover {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: var(--colorTabBar) !important;
-}
-.dialog-content .button-toolbar.BookmarkLocationSelector-AddFolderButton button[name=bookmarkNewFolderButton][title="New Folder"]:active {
-  border: 1px solid var(--colorHighlightBg) !important;
-  background-color: var(--colorTabBar) !important;
-  transition: background-color 0.1s;
-}
-.dialog-content .button-toolbar.BookmarkLocationSelector-AddFolderButton button[name=bookmarkNewFolderButton][title="New Folder"]:active:hover {
-  background-color: #355D75 !important;
-}
-
-.dialog-footer {
-  height: 52.8px !important;
 }
 
 .panel .SlideBar--FullWidth.alternate {
@@ -917,10 +584,6 @@ input[type=range i]::-webkit-slider-thumb:hover, input[type=range i]::-webkit-sl
 }
 .panel section.download-editor .data.downloads-cardwrapper {
   max-width: 97%;
-}
-
-.download-popout {
-  height: 500px !important;
 }
 
 .tree-item[data-id="0"] .button-category svg {
@@ -1131,6 +794,320 @@ input[type=range i]::-webkit-slider-thumb:hover, input[type=range i]::-webkit-sl
 }
 .tree-item[data-id="20"] .button-category svg rect {
   all: unset;
+}
+
+.vivaldi-settings .settings-sidebar {
+  box-shadow: none;
+  border-right: 0.9px solid #454B50;
+}
+.vivaldi-settings .settings-sidebar .settings-navigation-header {
+  border-bottom: 0.9px solid #454B50;
+}
+.vivaldi-settings .settings-sidebar .settings-navigation > .ReactVirtualized__Grid.ReactVirtualized__List {
+  border: 0px;
+  border-radius: 0px;
+}
+.vivaldi-settings .settings-sidebar .settings-navigation > .ReactVirtualized__Grid.ReactVirtualized__List:hover {
+  border-color: #5F6265;
+}
+.vivaldi-settings .settings-content {
+  background-color: var(--colorBg) !important;
+}
+.vivaldi-settings .settings-content .tree-row.folder .expand-icon svg path {
+  d: path("M 7.5,4.9730007 L 3.0270617,9.446 L 2.5,8.9189402 L 6.445881,4.9730007 L 2.5,1.0270688 L 3.0270617,0.5 Z");
+}
+
+.master-detail {
+  border: 1px solid #454B50 !important;
+  border-radius: 3px !important;
+}
+.master-detail .master-toolbar {
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+  border-top: 1px solid #454B50 !important;
+}
+.master-detail .master-toolbar select.button-toolbar {
+  z-index: 0;
+  background-image: url(downarrow_cropped.png);
+  background-size: 12px;
+  background-position: center !important;
+  border-radius: 0px !important;
+}
+.master-detail .master-toolbar button.button-toolbar {
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+  border-radius: 0px !important;
+  background-color: #2E3236 !important;
+  background-image: none !important;
+  transition: border 0.1s;
+}
+.master-detail .master-toolbar button.button-toolbar:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: #2E3236 !important;
+}
+.master-detail .master-toolbar button.button-toolbar:active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: #2E3236 !important;
+  transition: background-color 0.1s;
+}
+.master-detail .master-toolbar button.button-toolbar:active:hover {
+  background-color: #355D75 !important;
+}
+.master-detail .master-toolbar button.button-toolbar:nth-of-type(1) svg path {
+  transform: matrix(0.8, 0, 0, 0.8, -0.4, -1.2);
+  d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
+}
+.master-detail .master-toolbar button.button-toolbar:nth-of-type(2) svg path {
+  d: path("m 2,7.4550779 v 1.0878907 c 4.115672,-6.105e-4 7.9252791,2e-7 12,2e-7 V 7.4550781 c -4.0648358,-5.603e-4 -7.9623522,-2e-7 -12,-2e-7 z");
+}
+.master-detail .master-toolbar button.button-toolbar:nth-of-type(3) svg path {
+  d: path("m 8,4.647 l -6,6 l 0.707,0.707 L 8,6.061 l 5.293,5.293 L 14,10.647 Z");
+}
+.master-detail .master-toolbar button.button-toolbar:nth-of-type(4) svg path {
+  d: path("m 8,11.353 l -6,-6 L 2.707,4.646 L 8,9.939 L 13.293,4.646 L 14,5.353 Z");
+}
+.master-detail .master-items {
+  border: 0px !important;
+  background-color: #1B1E20 !important;
+  background-image: none !important;
+}
+.master-detail .master-items .item.item-selected {
+  background-color: #1F485E;
+}
+.master-detail .master-items .item:hover:not(.item-selected) {
+  background-color: #25495C;
+}
+.master-detail .master-layout-single {
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+  border-right: 1px solid #454B50 !important;
+}
+.master-detail .detail {
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.Inner__control {
+  border: 1px solid #6E7175 !important;
+  background-color: var(--colorTabBar) !important;
+  height: 29.5px !important;
+}
+.Inner__control:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+.Inner__control:active, .Inner__control:focus-within {
+  outline: 0px !important;
+  background-color: #355D75 !important;
+  border: 1px solid var(--colorHighlightBg) !important;
+}
+.Inner__control .Inner__indicator {
+  background-image: url("downarrow.png") !important;
+  background-size: 15.2px !important;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.Inner__control .Inner__input input[id^=react-select-] {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.gesture-map.setting-single select {
+  height: 200px !important;
+}
+
+.settings-content h2 {
+  border-bottom: 1px solid #454B50 !important;
+}
+.settings-content .keystrokes {
+  border: 1px solid #454B50 !important;
+  border-radius: 3px;
+}
+.settings-content .keystrokes .category.hide {
+  background-color: #1B1E20;
+}
+.settings-content .keystrokes .category.hide button:after {
+  -webkit-mask-image: url(downarrow_cropped.png);
+  transform: rotate(-90deg);
+  transition: transform 100ms linear;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: 0px;
+  width: 16px;
+  height: 8.5px;
+  top: 14px;
+}
+.settings-content .keystrokes .category.hide:hover {
+  background-color: #25495C;
+}
+.settings-content .keystrokes .category.show button {
+  background-color: #355D75;
+  border: 1px solid var(--colorHighlightBg);
+}
+.settings-content .keystrokes .category.show button:after {
+  -webkit-mask-image: url(downarrow_cropped.png);
+  transition: transform 100ms linear;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: 0px;
+  width: 16px;
+  height: 8.5px;
+  top: 14px;
+}
+.settings-content .keystrokes .category.show .multiinput {
+  border: none;
+  outline: none;
+}
+.settings-content .keystrokes .category.show .circular.clearkey {
+  -webkit-mask-image: url(window-close-symbolic.png);
+}
+.settings-content .keystrokes .category.show .circular.restorekey {
+  -webkit-mask-image: url(view-refresh-symbolic.png);
+}
+
+.button-startpage.add-set svg path {
+  d: path("M 7.2727258,0 V 7.262919 H 0 V 8.71436 H 7.2727258 V 16 H 8.72727 V 8.71436 H 16 V 7.262919 H 8.72727 V 0 Z");
+}
+
+.circular.update-thumbnail svg path {
+  d: path("m 14,8 c 0,1.1088173 -0.319333,2.140071 -0.84375,3.03125 l -2.6875,-2.6875 L 11.1875,7.625 l 1.625,1.625 c 0.05109,-0.19534 0.09772,-0.3898623 0.125,-0.59375 C 12.945289,8.6038437 12.962684,8.5529713 12.96875,8.5 C 12.98582,8.3319146 13,8.172589 13,8 C 13,5.238576 10.761424,3 8,3 C 7.756976,3 7.5144918,3.02845 7.28125,3.0625 C 7.1450007,3.082455 7.0074468,3.094286 6.875,3.125 C 6.5884185,3.19195 6.327376,3.291647 6.0625,3.40625 C 6.031825,3.419522 5.999101,3.423626 5.96875,3.4375 c -0.09166,0.040961 -0.163333,0.108255 -0.25,0.15625 c -0.008,0.00445 -0.02305,-0.00433 -0.03125,0 l -0.71875,-0.75 C 5.859929,2.319333 6.891182,2 8,2 c 3.313709,0 6,2.686293 6,6 z m -2.96875,5.15625 C 10.140071,13.680667 9.108818,14 8,14 C 4.686291,14 2,11.313707 2,8 C 2,6.8911827 2.319333,5.859929 2.84375,4.96875 l 0.75,0.75 L 5.5,7.65625 L 4.8125,8.34375 L 3.1875,6.75 C 3.13641,6.94534 3.08978,7.1398623 3.0625,7.34375 C 3.0547,7.396156 3.03732,7.4470287 3.03125,7.5 C 3.01418,7.6680854 3,7.827411 3,8 C 3,8.172589 3.01418,8.3319146 3.03125,8.5 C 3.04832,8.6680853 3.060448,8.837256 3.09375,9 C 3.559981,11.278415 5.583754,13 8,13 c 0.2482626,0 0.4801862,-0.02756 0.71875,-0.0625 C 8.8549993,12.91755 8.9925532,12.90571 9.125,12.875 c 0.2865815,-0.06695 0.547624,-0.166647 0.8125,-0.28125 c 0.030718,-0.01299 0.063349,-0.01766 0.09375,-0.03125 c 0.08886,-0.04062 0.164735,-0.108612 0.25,-0.15625 h 0.03125 z");
+}
+.circular.set-custom-thumbnail svg path {
+  transform: matrix(0.8, 0, 0, 0.8, -0.4, -1.2);
+  d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
+}
+.circular.close svg path {
+  fill: var(--colorFg);
+  transform: matrix(1.6666667, 0, 0, 1.6666667, -5.3333335, -5.3333335);
+  d: path("M 5.7070312,5 L 5,5.7070312 L 7.2929688,8 L 5,10.292969 L 5.7070312,11 L 8,8.7070312 L 10.292969,11 L 11,10.292969 L 8.7070312,8 L 11,5.7070312 L 10.292969,5 L 8,7.2929688 Z");
+}
+
+.SpeedDialView-Settings-Button path, .button-toolbar.button-show-setting path {
+  d: path("M 10.666667,0 C 9.424024,0 8.379283,0.849734 8.083332,2 H 0 V 3.3333333 H 8.083332 C 8.379283,4.4835993 9.424024,5.3333333 10.666667,5.3333333 C 11.909302,5.3333333 12.954056,4.4835993 13.249994,3.3333333 H 16 V 2 H 13.249994 C 12.954056,0.849734 11.909302,0 10.666667,0 Z M 4,9.333336 C 2.7573591,9.333336 1.7126172,10.183062 1.4166667,11.333333 H 0 V 12.666667 H 1.4166667 C 1.7126172,13.816938 2.7573591,14.666667 4,14.666667 C 5.2426409,14.666667 6.2873828,13.816938 6.5833333,12.666667 H 6.6666667 H 9.333334 H 16 V 11.333333 H 9.333334 H 6.6666667 H 6.5833333 C 6.2873828,10.183062 5.2426409,9.333336 4,9.333336 Z M 4,10.666667 C 4.7363733,10.666667 5.3333333,11.263627 5.3333333,12 C 5.3333333,12.736373 4.7363733,13.333333 4,13.333333 C 3.2636267,13.333333 2.6666667,12.736373 2.6666667,12 C 2.6666667,11.263627 3.2636267,10.666667 4,10.666667 Z");
+}
+
+#browser #webpage-stack nav.startpage-navigation {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+}
+#browser #webpage-stack nav.startpage-navigation .startpage-navigation-group:last-of-type {
+  border-left-width: 0;
+}
+#browser #webpage-stack .dial {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(10px);
+  transition: all 100ms ease;
+  border: 2px solid transparent;
+}
+#browser #webpage-stack .dial:hover {
+  margin-top: 0;
+  border: 2px solid var(--colorHighlightBg);
+  box-shadow: 0px 0px 6px 1px var(--colorHighlightBg);
+}
+#browser.theme-dark #webpage-stack nav.startpage-navigation {
+  background-color: rgba(42, 46, 50, 0.75);
+  color: #fff;
+}
+#browser.theme-dark #webpage-stack .dial {
+  background-color: rgba(42, 46, 50, 0.75) !important;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.TabbedView {
+  border: 1px solid #454B50;
+  background-color: #1B1E20;
+}
+.TabbedView .TabbedView-List {
+  border: 1px solid #454B50;
+  background-color: #26292d;
+}
+.TabbedView .TabbedView-Content .ThemeEditorColorPicker-ColorInput {
+  border: 1px solid #454B50;
+}
+.TabbedView .TabbedView-Content .TabbedView-Footer {
+  border-top: 1px solid #454B50;
+}
+.TabbedView .TabbedView-Content .Button-Manager select {
+  height: 82px !important;
+}
+.TabbedView .TabbedView-Content .sortselector.sortselector-tableheader {
+  background-color: var(--colorAccentBg);
+  border: none;
+}
+
+.vivaldi-tree .tree-row {
+  border-radius: 0px !important;
+}
+.vivaldi-tree .tree-row[data-selected] {
+  background-color: #1F485E;
+}
+.vivaldi-tree .tree-row:hover:not([data-selected]) {
+  background-color: #25495C;
+}
+
+.ReactVirtualized__Grid.ReactVirtualized__List {
+  background-color: #1B1E20;
+  border: 1px solid #5F6265;
+  border-radius: 3px;
+  transition: border 0.1s;
+}
+.ReactVirtualized__Grid.ReactVirtualized__List:hover {
+  border-color: var(--colorHighlightBg);
+}
+.ReactVirtualized__Grid.ReactVirtualized__List .button-category {
+  margin: 0px;
+  border-radius: 0px;
+}
+.ReactVirtualized__Grid.ReactVirtualized__List .button-category.category-selected {
+  background-color: var(--colorHighlightBg);
+}
+.ReactVirtualized__Grid.ReactVirtualized__List .button-category.spacer {
+  border-top: 0.9px solid #454B50;
+}
+.ReactVirtualized__Grid.ReactVirtualized__List .button-category:hover:not(.category-selected) {
+  background-color: #25495C;
+}
+
+.dialog-content {
+  background: var(--colorBg);
+}
+.dialog-content .button-toolbar.BookmarkLocationSelector-AddFolderButton button[name=bookmarkNewFolderButton][title="New Folder"] {
+  border: 1px solid #6E7175;
+  border-radius: 3px !important;
+  background-color: var(--colorTabBar) !important;
+  background-image: none !important;
+  transition: border 0.1s;
+}
+.dialog-content .button-toolbar.BookmarkLocationSelector-AddFolderButton button[name=bookmarkNewFolderButton][title="New Folder"]:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+}
+.dialog-content .button-toolbar.BookmarkLocationSelector-AddFolderButton button[name=bookmarkNewFolderButton][title="New Folder"]:active {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: var(--colorTabBar) !important;
+  transition: background-color 0.1s;
+}
+.dialog-content .button-toolbar.BookmarkLocationSelector-AddFolderButton button[name=bookmarkNewFolderButton][title="New Folder"]:active:hover {
+  background-color: #355D75 !important;
+}
+
+.dialog-footer {
+  height: 52.8px !important;
+}
+
+::-webkit-scrollbar-track {
+  margin: 5.5px;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: #313436 !important;
+  border: 1px solid #595C5D;
+  border-radius: calc(var(--scrollbarWidth) / 2);
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+  border: 1px solid #797B7D !important;
+  background-color: #424546 !important;
+}
+.theme-dark ::-webkit-scrollbar-thumb:hover {
+  border: 1px solid var(--colorHighlightBg) !important;
+  background-color: #2D546B !important;
+}
+
+::-webkit-scrollbar {
+  width: 7.7px;
 }
 
 /*# sourceMappingURL=breeze.css.map */

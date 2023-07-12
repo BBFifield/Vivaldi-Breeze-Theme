@@ -35,18 +35,6 @@
     }
 }
 
-.button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) {
-    .ToolbarButton-Button {
-        border: 1.0px solid rgba(0,0,0,0.0) !important;
-        @include button(rgba(0,0,0,0.0), rgba(0,0,0,0.0), 3px);
-
-        &.button-pressed, &.button-pressed:hover {
-            border: 1.0px solid $colorHighlightBdr !important;
-            background-color: $colorBtnActiveHvrBg !important;
-        }
-    }
-}
-
 
 button[name=PanelBookmarks], button[name=PanelHistory], button[name=PanelNotes] {
    padding-right: 5px;
@@ -66,16 +54,16 @@ button[name=PanelBookmarks], button[name=PanelHistory], button[name=PanelNotes] 
         --item-height: 29px;
         border-radius: 0px;
         &:hover {
-            &:not(.OmniLinkItem--Highlighted) {
-                background-color: $colorCategoryHover;
-            }
             .OmniLinkItem-EraseButton {
                 @include inner-close-button;
-
                 svg path {
                     d: path("M 4.6253,12.21839 8,8.84369 l 3.3747,3.3747 h 0.84369 V 11.3747 L 8.84369,8 12.21839,4.6253 V 3.78161 H 11.3747 L 8,7.15631 4.6253,3.78161 H 3.78161 V 4.6253 L 7.15631,8 3.78161,11.3747 v 0.84369 z");
                 }
             }
+            &:not(.OmniLinkItem--Highlighted) {
+                background-color: $colorCategoryHover;
+            }
+
         }
     }
     .OmniLinkItem--Highlighted {
@@ -112,20 +100,24 @@ footer {
     border: 0px rgba(0,0,0,0.0)!important;
     .toolbar-statusbar {
         height: 33px !important;
+        button {
+            padding-right: 5px;
+        }
     }
     &:after {
         bottom: 34px !important;
         background-color: rgba(0,0,0,0.0) !important;
     }
-
 }
-
-
 
 
 .button-popup {
     max-height: fit-content;
     box-shadow: 0 0 0 1px $colorSearchBdr, 0 2px 6px rgba(0, 0, 0, 0.25);
+
+    &.download-popout {
+        height: 500px !important;
+    }
     .BookmarkPopup {
         background-color: var(--colorBg);
         .BookmarkInputField {
@@ -135,20 +127,23 @@ footer {
                 box-shadow: none !important;
             }
         }
-        .dialog-content {
-            background: var(--colorBg);
-            .BookmarkLocationSelector-AddFolderButton {
-                button[name=bookmarkNewFolderButton] {
-                    border: 1px solid $colorInputBtnBdr;
-                    @include button(var(--colorTabBar), var(--colorTabBar), 3px);
-                }
-            }
-        }
-
-        .dialog-footer {
-            height: 52.8px !important;
-        }
     }
 }
 
+.panel {
+    .SlideBar--FullWidth.alternate {
+        border-color: $colorBdrSettingsSidebar !important;
+        &:hover {
+            border-color: var(--colorHighlightBg) !important;
+        }
+    }
+    section.download-editor {
+        overflow-y: auto !important;
+        margin-right: calc(var(--scrollbarWidth) * -1);
+
+        .data.downloads-cardwrapper {
+            max-width: 97%;
+        }
+    }
+}
 
