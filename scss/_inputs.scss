@@ -1,0 +1,136 @@
+.Switch-Button {
+    border: 1.0px solid $colorScrollBarBdr !important;
+    transition: border 0.1s !important;
+
+    &:hover {
+        border: 1.0px solid $colorHighlightBdr !important;
+    }
+
+}
+
+.Switch-Input {
+    border: 1.0px solid $colorInputBtnBdr !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    transition: border 0.1s !important;
+
+    &:checked {
+        border: 1.0px solid $colorHighlightBdr !important;
+        background-color: $colorRangeBdrSwitchOnBg !important;
+    }
+}
+
+input[type=number] {
+    //border: 1.0px solid $colorInputBtnBdr !important;
+    transition: border 0.1s !important;
+    &:hover {
+        border: 1.0px solid $colorHighlightBdr !important;
+        transition-duration: 5ms !important;
+    }
+    &:focus-visible {
+        outline: 0px !important;
+        border: 1.0px solid $colorHighlightBdr !important;
+    }
+}
+
+input[type=checkbox] {
+    background-image: none !important;
+    background-color: $colorInputBg !important;
+    border: 1.0px solid $colorInputBtnBdr !important;
+    transition: border 0.1s !important;
+    &:hover {
+        border: 1.0px solid $colorHighlightBdr !important;
+        transition-duration: 5ms !important;
+    }
+    &:active {
+        filter: none !important;
+    }
+    &:checked {
+        background-color: $colorCkBxOnBg !important;
+        border: 1.0px solid $colorHighlightBdr !important;
+        &:before {
+            background-color: var(--colorFg) !important;
+            transform: rotate(-45deg) translateY(42%) translateX(-28%) scaleX(0.15) scaleY(0.35) !important;
+        }
+        &:after {
+            background-color: var(--colorFg) !important;
+            transform: rotate(225deg) translateY(-28%) translateX(-90%) scaleX(0.16) scaleY(0.72) !important;
+            transition-duration: 5ms !important;
+        }
+    }
+}
+
+input[type=radio] {
+    background-image: none !important;
+    background-color: $colorInputBg !important;
+    border: 1.0px solid $colorSearchBdr !important;
+
+    &:hover {
+        border: 1.0px solid $colorHighlightBdr !important;
+    }
+    &:active {
+        border: 1.0px solid $colorHighlightBdr !important;
+        box-shadow: none !important;
+        filter: none !important;
+    }
+    &:checked, &:checked:active {
+        background-color: var(--colorFg) !important;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, inset 0 0 0 4px $colorBtnActiveHvrBg !important;
+        transition: none !important;
+        border: 1.0px solid $colorHighlightBdr !important;
+    }
+}
+
+input[type=search], input[type=text]:not(#urlFieldInput):not([id^=react-select-]) {
+    @include search-field;
+}
+
+select {
+    border: 1.0px solid $colorInputBtnBdr !important;
+    background-color:  var(--colorTabBar) !important;
+    height: 29.5px !important;
+    z-index: 1;
+    &:hover {
+        border: 1.0px solid $colorHighlightBdr !important;
+    }
+    &:active, &:focus-visible {
+        outline: 0px !important;
+        background-color: $colorBtnActiveHvrBg !important;
+        border: 1.0px solid $colorHighlightBdr !important;
+    }
+    &:not([multiple]):not([size]), input[type=date] {
+        background-image: url("downarrow.png");
+        background-size: 15.2px;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+}
+
+input[type="date"] {
+    background-image: url("whitearrow.png");
+    background-size: 15.2px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+input[type="range"] {
+    background-color: $colorRangeBdrSwitchOnBg;
+    border: 1.0px solid $colorHighlightBdr;
+    border-radius: 12px;
+    height: 6px;
+
+    &:disabled {
+        border-color: #1F485E;
+        background-color: #243B48;
+        opacity: 1;
+    }
+    &::-webkit-slider-thumb {
+        border: 1.0px solid #7E8083;
+        height: 18px;
+        width: 18px;
+        transition: border-color 0.15s;
+        &:hover, &:active {
+            border: 1.0px solid $colorHighlightBdr;
+        }
+    }
+}

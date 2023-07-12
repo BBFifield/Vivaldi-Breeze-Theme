@@ -1,0 +1,112 @@
+@mixin inner-close-button {
+    border-radius: 10px;
+    background-color: $colorCloseBtnBg;
+    fill: var(--colorBg) !important;
+
+    &:hover {
+        background-color: $colorCloseBtnActiveBg;
+        &:active {
+            background-color: $colorCloseBtnActiveHvrBg;
+        }
+    }
+    &:active {
+        background-color: $colorCloseBtnActiveBg;
+    }
+}
+
+@mixin button($colorChangeBg, $colorStagnantBg, $radius) {
+    border-radius: $radius !important;
+    background-color: $colorStagnantBg !important;
+    background-image: none !important;
+    transition: border 0.1s;
+    &:hover {
+        border: 1.0px solid $colorHighlightBdr !important;
+        background-color: $colorChangeBg !important;
+    }
+    &:active {
+        border: 1.0px solid $colorHighlightBdr !important;
+        background-color: $colorChangeBg !important;
+        transition: background-color 0.1s;
+        &:hover {
+            background-color: $colorBtnActiveHvrBg !important;
+        }
+    }
+}
+
+.button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) {
+    .ToolbarButton-Button {
+        border: 1.0px solid rgba(0,0,0,0.0) !important;
+        @include button(rgba(0,0,0,0.0), rgba(0,0,0,0.0), 3px);
+
+        &.button-pressed, &.button-pressed:hover {
+            border: 1.0px solid $colorHighlightBdr !important;
+            background-color: $colorBtnActiveHvrBg !important;
+        }
+    }
+}
+
+.button-show-setting .ToolbarButton-Button, input[type=button]:not(.circular), input[type=submit], .privacy-btn-icon {
+    border: 1.0px solid $colorInputBtnBdr !important;
+    @include button(var(--colorTabBar), var(--colorTabBar), 3px);
+}
+
+.close {
+    @include inner-close-button;
+    svg {
+        path {
+            d: path("M 4.6253,12.21839 8,8.84369 l 3.3747,3.3747 h 0.84369 V 11.3747 L 8.84369,8 12.21839,4.6253 V 3.78161 H 11.3747 L 8,7.15631 4.6253,3.78161 H 3.78161 V 4.6253 L 7.15631,8 3.78161,11.3747 v 0.84369 z");
+        }
+    }
+}
+
+button[title="New Folder"] {
+    svg path {
+        d: path("m 0,0 v 1.333332 v 4 V 6.666668 V 14.66668 V 16 H 16 V 14.66668 V 5.333332 V 4 V 2.666668 H 9.333332 L 6.666668,0 V 0 V 0 H 1.333332 Z m 1.333332,1.333332 h 4.8 l1.333336,1.333336 h -0.8 v 0 v 0 L 4,5.333332 H 1.333332 Z m 0,5.333336 H 14.66668 V 14.66668 H 1.333332 Z");
+    }
+}
+
+.TabbedView {
+    .TabbedView-List {
+        button {
+            border: 1.0px solid $colorInputBtnBdr !important;
+            @include button(var(--colorTabBar), var(--colorTabBar), 3px)
+        }
+    }
+}
+
+
+.toolbar-default {
+    .toolbar-group:not(.toolbar) {
+        .button-toolbar {
+            .ToolbarButton-Button {
+                border: 1.0px solid transparent !important;
+                @include button(transparent, transparent, 3px);
+            }
+        }
+    }
+    &.toolbar {
+        .toolbar-group.toolbar {
+            gap: 2px;
+            hr {
+                all: unset;
+            }
+            .button-toolbar {
+                .ToolbarButton-Button:not(.button-pressed) {
+                    border: 1.0px solid $colorInputBtnBdr !important;
+                    @include button(var(--colorTabBar),var(--colorTabBar) , 3px);
+                }
+            }
+        }
+    }
+    > .button-toolbar {
+        .ToolbarButton-Button {
+            border: 1.0px solid $colorInputBtnBdr !important;
+            @include button(var(--colorTabBar), var(--colorTabBar), 3px);
+        }
+    }
+}
+
+
+
+
+

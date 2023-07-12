@@ -1,0 +1,191 @@
+@import "settings-page-icons";
+
+
+.vivaldi-settings {
+    .settings-sidebar {
+        box-shadow: none;
+        border-right: 0.9px solid $colorBdrSettingsSidebar;
+        .settings-navigation-header {
+            border-bottom: 0.9px solid $colorBdrSettingsSidebar;
+
+        }
+        .settings-navigation {
+            > .ReactVirtualized__Grid.ReactVirtualized__List {
+                border: 0px;
+                border-radius: 0px;
+                &:hover {
+                    border-color: $colorSearchBdr;
+                }
+            }
+        }
+    }
+    .settings-content {
+        background-color: var(--colorBg) !important;
+        .tree-row.folder {
+            .expand-icon {
+                svg {
+                    path {
+                        d: path("M 7.5,4.9730007 L 3.0270617,9.446 L 2.5,8.9189402 L 6.445881,4.9730007 L 2.5,1.0270688 L 3.0270617,0.5 Z");
+                    }
+                }
+            }
+        }
+    }
+}
+
+.master-detail {
+    border: 1px solid $colorBdrSettingsSidebar !important;
+    border-radius: 3px !important;
+    .master-toolbar {
+        border: 1px solid rgba(0,0,0,0.0) !important;
+        border-top: 1px solid $colorBdrSettingsSidebar !important;
+
+        select.button-toolbar {
+            z-index: 0;
+            background-image: url(downarrow_cropped.png);
+            background-size: 12px;
+            background-position: center !important;
+            border-radius: 0px !important;
+        }
+        button.button-toolbar {
+            border: 1px solid rgba(0,0,0,0.0) !important;
+            @include button($colorBtnMasterToolbar, $colorBtnMasterToolbar, 0px);
+
+            &:nth-of-type(1) {
+                svg path {
+                    transform: matrix(0.8,0,0,0.8,-0.4,-1.2);
+                    d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
+                }
+            }
+            &:nth-of-type(2) {
+                svg path {
+                    d: path("m 2,7.4550779 v 1.0878907 c 4.115672,-6.105e-4 7.9252791,2e-7 12,2e-7 V 7.4550781 c -4.0648358,-5.603e-4 -7.9623522,-2e-7 -12,-2e-7 z");
+                }
+            }
+            &:nth-of-type(3) {
+                svg path {
+                    d: path("m 8,4.647 l -6,6 l 0.707,0.707 L 8,6.061 l 5.293,5.293 L 14,10.647 Z");
+                }
+            }
+            &:nth-of-type(4) {
+                svg path {
+                    d: path("m 8,11.353 l -6,-6 L 2.707,4.646 L 8,9.939 L 13.293,4.646 L 14,5.353 Z");
+                }
+            }
+        }
+    }
+    .master-items {
+        border: 0px !important;
+        background-color: $colorInputBg !important;
+        background-image: none !important;
+        .item {
+            &.item-selected {
+                background-color: $colorItemInactive;
+            }
+            &:hover:not(.item-selected) {
+                background-color: $colorCategoryHover;
+            }
+        }
+    }
+    .master-layout-single {
+        border: 1px solid rgba(0,0,0,0.0) !important;
+        border-right: 1px solid $colorBdrSettingsSidebar !important;
+    }
+    .detail {
+        border: 1px solid rgba(0,0,0,0.0);
+    }
+}
+
+
+.Inner__control {
+    border: 1.0px solid $colorInputBtnBdr !important;
+    background-color:  var(--colorTabBar) !important;
+    height: 29.5px !important;
+    &:hover {
+        border: 1.0px solid $colorHighlightBdr !important;
+    }
+    &:active, &:focus-within {
+        outline: 0px !important;
+        background-color: $colorBtnActiveHvrBg !important;
+        border: 1.0px solid $colorHighlightBdr !important;
+
+    }
+    .Inner__indicator {
+        background-image: url("downarrow.png") !important;
+        background-size: 15.2px !important;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+
+    .Inner__input {
+        input[id^=react-select-] {
+            background-color: transparent !important;
+            border: none !important;
+        }
+    }
+}
+
+.gesture-map.setting-single {
+    select {
+        height: 200px !important;
+    }
+}
+
+.settings-content {
+    h2 {
+        border-bottom: 1px solid $colorBdrSettingsSidebar !important;
+    }
+    .keystrokes {
+        border: 1px solid $colorBdrSettingsSidebar !important;
+        border-radius: 3px;
+        .category {
+            &.hide {
+                background-color: $colorInputBg;
+                button {
+                    &:after {
+                        -webkit-mask-image: url(downarrow_cropped.png);
+                        transform: rotate(-90deg);
+                        transition: transform 100ms linear;
+                        -webkit-mask-size: cover;
+                        -webkit-mask-position: 0px;
+                        width: 16px;
+                        height: 8.5px;
+                        top: 14px;
+                    }
+                }
+
+                &:hover {
+                    background-color: $colorCategoryHover;
+                }
+            }
+            &.show {
+                button {
+                    background-color: $colorBtnActiveHvrBg;
+                    border: 1px solid $colorHighlightBdr;
+
+                    &:after {
+                        -webkit-mask-image: url(downarrow_cropped.png);
+                        transition: transform 100ms linear;
+                        -webkit-mask-size: cover;
+                        -webkit-mask-position: 0px;
+                        width: 16px;
+                        height: 8.5px;
+                        top: 14px;
+                    }
+                }
+                .multiinput {
+                    border: none;
+                    outline: none;
+                }
+                .circular {
+                    &.clearkey {
+                        -webkit-mask-image: url(window-close-symbolic.png);
+                    }
+                    &.restorekey {
+                        -webkit-mask-image: url(view-refresh-symbolic.png);
+                    }
+                }
+            }
+        }
+    }
+}
