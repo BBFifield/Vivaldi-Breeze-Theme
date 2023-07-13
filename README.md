@@ -11,6 +11,7 @@
 
 ## Installation:
 * To enable this theme, go to vivaldi://experiments/ and check "Allow CSS Modifications". Then head to the Appearance section in Vivaldi settings and choose the root folder of this theme under "CUSTOM UI MODIFICATIONS".
+* Then head to the theme manager in the Themes section to import BreezeDark.zip. This is necessary since there are additional CSS variables used from it.  
 
 * To allow Kwin to draw window shadows when not using the native window controls and border, perform the following steps:
 
