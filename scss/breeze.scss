@@ -1,11 +1,14 @@
 @use "mixins" as *;
+@use "sass:list";
 @import "variables";
+@import "icons_general";
 @import "buttons";
 @import "inputs";
 @import "window_buttons";
 @import "tabbar";
 @import "toolbars";
 @import "inner";
+@import "experimental_stuff";
 
 ::-webkit-scrollbar-track {
     margin: 5.5px;
@@ -21,7 +24,7 @@
         background-color: $colorScrollBarBg !important;
         &:hover {
             border:1.0px solid $colorHighlightBdr !important;
-            background-color: $colorCkBxOnBg !important;
+            background-color: $colorScrollThumbHvrBg !important;
         }
     }
 }

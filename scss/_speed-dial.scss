@@ -5,17 +5,22 @@
 }
 
 .circular {
+    &:hover {
+        opacity: 1 !important;
+    }
     &.update-thumbnail svg path {
-        d: path("m 14,8 c 0,1.1088173 -0.319333,2.140071 -0.84375,3.03125 l -2.6875,-2.6875 L 11.1875,7.625 l 1.625,1.625 c 0.05109,-0.19534 0.09772,-0.3898623 0.125,-0.59375 C 12.945289,8.6038437 12.962684,8.5529713 12.96875,8.5 C 12.98582,8.3319146 13,8.172589 13,8 C 13,5.238576 10.761424,3 8,3 C 7.756976,3 7.5144918,3.02845 7.28125,3.0625 C 7.1450007,3.082455 7.0074468,3.094286 6.875,3.125 C 6.5884185,3.19195 6.327376,3.291647 6.0625,3.40625 C 6.031825,3.419522 5.999101,3.423626 5.96875,3.4375 c -0.09166,0.040961 -0.163333,0.108255 -0.25,0.15625 c -0.008,0.00445 -0.02305,-0.00433 -0.03125,0 l -0.71875,-0.75 C 5.859929,2.319333 6.891182,2 8,2 c 3.313709,0 6,2.686293 6,6 z m -2.96875,5.15625 C 10.140071,13.680667 9.108818,14 8,14 C 4.686291,14 2,11.313707 2,8 C 2,6.8911827 2.319333,5.859929 2.84375,4.96875 l 0.75,0.75 L 5.5,7.65625 L 4.8125,8.34375 L 3.1875,6.75 C 3.13641,6.94534 3.08978,7.1398623 3.0625,7.34375 C 3.0547,7.396156 3.03732,7.4470287 3.03125,7.5 C 3.01418,7.6680854 3,7.827411 3,8 C 3,8.172589 3.01418,8.3319146 3.03125,8.5 C 3.04832,8.6680853 3.060448,8.837256 3.09375,9 C 3.559981,11.278415 5.583754,13 8,13 c 0.2482626,0 0.4801862,-0.02756 0.71875,-0.0625 C 8.8549993,12.91755 8.9925532,12.90571 9.125,12.875 c 0.2865815,-0.06695 0.547624,-0.166647 0.8125,-0.28125 c 0.030718,-0.01299 0.063349,-0.01766 0.09375,-0.03125 c 0.08886,-0.04062 0.164735,-0.108612 0.25,-0.15625 h 0.03125 z");
+        d: path($refreshIcon16);
     }
     &.set-custom-thumbnail svg path {
-        transform: matrix(0.8,0,0,0.8,-0.4,-1.2);
-        d: path("M 10,4 V 11 H 3 V 12 H 10 V 19 H 11 V 12 H 18 V 11 H 11 V 4 Z");
+
+        d: path($addIcon16);
     }
-    &.close svg path {
-        fill: var(--colorFg);
-        transform: matrix(1.6666667,0,0,1.6666667,-5.3333335,-5.3333335);
-        d: path("M 5.7070312,5 L 5,5.7070312 L 7.2929688,8 L 5,10.292969 L 5.7070312,11 L 8,8.7070312 L 10.292969,11 L 11,10.292969 L 8.7070312,8 L 11,5.7070312 L 10.292969,5 L 8,7.2929688 Z");
+    &.close {
+        @include inner-close-button;
+        svg path {
+            fill: var(--colorFg);
+            d: path($innerCloseIcon);
+        }
     }
 }
 
@@ -57,6 +62,33 @@
         .dial {
             background-color: rgba(42,46,50, 0.75) !important;
             color: rgba(255,255,255, 0.9);
+        }
+    }
+}
+
+.Privacy-Stats-Board.TabbedView {
+    border: 0px;
+    .TabbedView-List {
+        border: 1px solid $colorBdrSettingsSidebar !important;
+    }
+    .TabbedView-Content {
+        .sortselector.sortselector-tableheader {
+            border-left: 1px solid $colorBdrSettingsSidebar !important;
+            border-right: 1px solid $colorBdrSettingsSidebar !important;
+            padding-right: 0px;
+            .sortselector-button {
+                height: 22px;
+                &:hover {
+                    background-color: $colorSortSelectorHvr;
+                }
+            }
+            .SlideBar.SlideBar--FullHeight.alternate {
+                background-color: $colorSortSelectorSlider;
+                border-width: 0 3.5px;
+            }
+        }
+        .ReactVirtualized__Grid.ReactVirtualized__List {
+            border-radius: 0px 0px 3px 3px;
         }
     }
 }

@@ -6,7 +6,7 @@
     border: 1px solid $colorBdrSettingsSidebar;
     background-color: $colorInputBg;
     .TabbedView-List {
-        border: 1px solid $colorBdrSettingsSidebar;
+        border-bottom: 1px solid $colorBdrSettingsSidebar;
         background-color: $colorTabbedViewBg;
     }
     .TabbedView-Content {
@@ -24,13 +24,22 @@
         .sortselector.sortselector-tableheader {
             background-color: var(--colorAccentBg);
             border: none;
+            .sortselector-button.sortselector-button-active {
+                &.direction-ascending, &.direction-descending  {
+                    span.column-sort-order {
+                        svg path {
+                            d: path($upArrowIcon11x6);
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
 
 .vivaldi-tree {
-    //border: 1px solid $colorBdrSettingsSidebar !important;
+    border: 0px solid transparent !important;
     .tree-row {
         border-radius: 0px !important;
         &[data-selected] {
@@ -41,6 +50,23 @@
                 background-color: $colorCategoryHover;
             }
         }
+        button[title="Show in File Manager"] {
+            svg path {
+                &:first-child {
+                    d: path("m 0,0 v 1.3333333 v 4 V 6.6666667 V 14.666667 V 16 H 16 V 14.666667 V 5.3333333 V 4 V 2.6666667 H 9.333333 L 6.6666667,0 V 0 V 0 H 1.3333333 Z m 1.3333333,1.3333333 h 4.8 l 1.3333334,1.3333334 h -0.8 v 0 v 0 L 4,5.3333333 H 1.3333333 Z m 0,5.3333334 H 14.666667 V 14.666667 H 1.3333333 Z");
+                }
+                &:last-child {
+                    all: unset;
+                }
+            }
+        }
+        .expand-icon {
+                svg {
+                    path {
+                        d: path("M 7.5,4.9730007 L 3.0270617,9.446 L 2.5,8.9189402 L 6.445881,4.9730007 L 2.5,1.0270688 L 3.0270617,0.5 Z");
+                    }
+                }
+            }
     }
 }
 
@@ -67,16 +93,11 @@
     }
 }
 
-.dialog-content {
-    background: var(--colorBg);
-    .button-toolbar.BookmarkLocationSelector-AddFolderButton {
-        button[name=bookmarkNewFolderButton][title="New Folder"] {
-            border: 1px solid $colorInputBtnBdr;
-            @include button(var(--colorTabBar), var(--colorTabBar), 3px);
-        }
+.setting-single.menu-items {
+    img {
+        content: url("./resources/configure.png");
     }
 }
-.dialog-footer {
-    height: 52.8px !important;
-}
+
+
 

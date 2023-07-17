@@ -81,7 +81,7 @@ input[type=radio] {
     }
 }
 
-input[type=search], input[type=text]:not(#urlFieldInput):not([id^=react-select-]) {
+input[type=search]:not(.vivaldi-searchfield.searchfield-input), input[type=text]:not(#urlFieldInput):not([id^=react-select-])/*:not(.dateInputAmPm)*/ {
     @include search-field;
 }
 
@@ -99,19 +99,19 @@ select {
         border: 1.0px solid $colorHighlightBdr !important;
     }
     &:not([multiple]):not([size]), input[type=date] {
-        background-image: url("downarrow.png");
+        background-image: url("./resources/downarrow.png");
         background-size: 15.2px;
         background-repeat: no-repeat;
         background-position: right center;
     }
 }
 
-input[type="date"] {
+/*input[type="date"] {
     background-image: url("whitearrow.png");
     background-size: 15.2px;
     background-repeat: no-repeat;
     background-position: right center;
-}
+}*/
 
 input[type="range"] {
     background-color: $colorRangeBdrSwitchOnBg;
@@ -120,7 +120,7 @@ input[type="range"] {
     height: 6px;
 
     &:disabled {
-        border-color: #1F485E;
+        border-color: $colorItemInactive;
         background-color: #243B48;
         opacity: 1;
     }

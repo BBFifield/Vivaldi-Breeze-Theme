@@ -1,9 +1,19 @@
+
+
+/*#browser {
+    --colorHighlightBgDark: var(--colorHighlightBg);
+    --colorHighlightBg: transparent !important;
+}
+$colorHighlightBdrAlt: var(--colorHighlightBgDark);*/
+
 $colorTabbedViewBg: #26292d;
 
 $colorBtnMasterToolbar: #2E3236;
 $colorItemInactive: #1F485E;
 
 $colorCategoryHover: #25495C;
+$colorSortSelectorHvr: #334E5E;
+$colorSortSelectorSlider: #595D61;
 
 $colorTrim: #64686B;
 $colorBdrSettingsSidebar: #454B50;
@@ -26,6 +36,7 @@ $colorStackCounter: #4460da;
 
 $colorScrollBarBdr: #797B7D;
 $colorScrollBarBg: #424546;
+$colorScrollThumbHvrBg: #2C6685;
 
 $colorScrollBarTrackBdr: #595C5D;
 $colorScrollBarTrackHvrBg: #313436;
@@ -39,3 +50,19 @@ $colorInputBg: #1B1E20;
 $colorCkBxOnBg: #2D546B;
 $colorRangeBdrSwitchOnBg: #346E8E;
 
+$colorDownloadVisibleBdr: #5C5E62;
+$colorDownloadVisibleBg: #3F4246;
+
+$colorMenuSeparator: #54575A;
+
+
+
+$addIconPanelTitleList: "Add current page" "New Bookmark" "New Note" "New Tab" "Add a feed";
+
+$addIconSettingsTitleList: "Add Language" "Add Search Engine" "Add Command Chain" "New gesture" "Add Site Exception" "Add account" "Add Account" "Add Calendar" "Add Feed";
+
+$checkmarkIconTitleList: "Set as Read" "Mark as Read";
+
+$seenIconTitleList: "Set as Unread" "Mark as unread" "Privacy Settings";
+
+$refreshIconTitleList: "Restart" "Check all feeds" "Check all accounts";

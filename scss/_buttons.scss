@@ -33,6 +33,10 @@
     }
 }
 
+.danger {
+    color: var(--colorFg) !important;
+}
+
 .button-toolbar:not(.BookmarkLocationSelector-AddFolderButton) {
     .ToolbarButton-Button {
         border: 1.0px solid rgba(0,0,0,0.0) !important;
@@ -54,14 +58,115 @@
     @include inner-close-button;
     svg {
         path {
-            d: path("M 4.6253,12.21839 8,8.84369 l 3.3747,3.3747 h 0.84369 V 11.3747 L 8.84369,8 12.21839,4.6253 V 3.78161 H 11.3747 L 8,7.15631 4.6253,3.78161 H 3.78161 V 4.6253 L 7.15631,8 3.78161,11.3747 v 0.84369 z");
+            d: path($innerCloseIcon);
         }
     }
 }
 
 button[title="New Folder"] {
     svg path {
-        d: path("m 0,0 v 1.333332 v 4 V 6.666668 V 14.66668 V 16 H 16 V 14.66668 V 5.333332 V 4 V 2.666668 H 9.333332 L 6.666668,0 V 0 V 0 H 1.333332 Z m 1.333332,1.333332 h 4.8 l1.333336,1.333336 h -0.8 v 0 v 0 L 4,5.333332 H 1.333332 Z m 0,5.333336 H 14.66668 V 14.66668 H 1.333332 Z");
+        d: path($newFolderIcon16);
+    }
+}
+
+button[title="Edit gesture"], button span.column-icon {
+    svg {
+        path {
+            all: unset;
+            d: path($editIcon16);
+        }
+        rect {
+            all: unset;
+        }
+    }
+}
+
+@each $iconTitle in $addIconPanelTitleList {
+    .button-toolbar[title="#{$iconTitle}"], button[title="#{$iconTitle}"] {
+        svg path {
+            d: path($addIcon16);
+        }
+        + .button-toolbar, + button {
+            svg rect {
+                x: 3;
+                y: 7;
+                width: 10px;
+                height: 2px;
+            }
+        }
+    }
+}
+
+@each $iconTitle in $addIconSettingsTitleList {
+    button[title="#{$iconTitle}"] {
+        svg path {
+            d: path($addIcon16);
+        }
+        + button {
+            svg path {
+                d: path($removeIcon16);
+            }
+        }
+    }
+}
+
+@each $iconTitle in $checkmarkIconTitleList {
+    .button-toolbar[title="#{$iconTitle}"], button[title="#{$iconTitle}"] {
+        svg path {
+            d: path($checkmarkIcon16);
+        }
+    }
+}
+
+@each $iconTitle in $seenIconTitleList {
+    .button-toolbar[title="#{$iconTitle}"], button[title="#{$iconTitle}"] {
+        svg path {
+
+            d: path($seenIcon16);
+        }
+    }
+}
+
+.button-toolbar[title="Pause"], button[title="Pause"] {
+    svg path {
+        &:nth-child(1) {
+            d: path(list.nth($pauseIcon16, 1));
+        }
+        &:nth-child(2) {
+            d: path(list.nth($pauseIcon16, 2));
+        }
+    }
+}
+@each $iconTitle in $refreshIconTitleList {
+    .button-toolbar[title="#{$iconTitle}"], button[title="#{$iconTitle}"] {
+        svg path {
+            &:nth-child(1) {
+                d: path($refreshIcon16);
+            }
+            &:nth-child(2) {
+                all: unset;
+            }
+        }
+    }
+}
+
+.button-toolbar[title="Remove all finished"], button[title="Remove all finished"] {
+    svg path {
+        &:nth-child(1) {
+            d: path($clearIcon16);
+        }
+        &:nth-child(2) {
+            all: unset;
+        }
+    }
+}
+
+.button-toolbar[title="Resume Download"], button[title="Resume Download"] {
+    svg {
+        polygon {
+            all: unset;
+        }
+        background-image: url($playIcon16);
     }
 }
 
@@ -91,7 +196,7 @@ button[title="New Folder"] {
                 all: unset;
             }
             .button-toolbar {
-                .ToolbarButton-Button:not(.button-pressed) {
+                .ToolbarButton-Button:not(.button-pressed):not(button[title="Check all feeds"]):not(button[title="Add a feed"]) {
                     border: 1.0px solid $colorInputBtnBdr !important;
                     @include button(var(--colorTabBar),var(--colorTabBar) , 3px);
                 }
@@ -106,7 +211,28 @@ button[title="New Folder"] {
     }
 }
 
+/*input[type=button]:not(.circular), input[type=submit], input[type=color], .FormButton {
+    height: 36px;
+}*/
 
+.drop-down-menu > button > svg path {
+    fill-rule: evenodd;
+    d: path($downArrowIcon16);
+}
 
+.VivaldiDropdown-SelectedValue-Arrow svg path {
+    fill-rule: evenodd;
+    d: path($downArrowIcon16);
+}
 
+button.home {
+    border: 1px solid transparent;
+    @include button(var(--colorBg), var(--colorBg), 3px);
+    svg path {
+        d: path($homeIcon16);
+    }
+    &:disabled {
+        border: 0px;
+    }
+}
 

@@ -1,0 +1,112 @@
+.MailAccountSheet .email-partnership, .setting-mail-account .email-partnership {
+    border-top: unset;
+}
+
+.ClockPopup-Header {
+    border-radius: 3px;
+    border-bottom: 0px;
+}
+.popup-scrollarea {
+    border-radius: 3px;
+    .ClockPopup-Active, .ClockPopup-Passed {
+        border-bottom: 0px;
+        background-color: var(--colorBg);
+    }
+}
+.ClockPopup-BigClock {
+    background-color: var(--colorBg);
+}
+
+.ClockPopup-Presets {
+    .ClockPopup-PresetWrapper {
+        border: 1px solid $colorInputBtnBdr;
+        @include button(var(--colorTabBar), var(--colorTabBar), 3px);
+        height: 24px;
+        .ClockPopup-Preset {
+            border: 0px;
+            background: unset;
+        }
+        .ClockPopup-Preset-Clear {
+            @include inner-close-button;
+            width: 19px;
+            height: 19px;
+            margin: auto;
+            position: relative;
+            right: 4px;
+            svg {
+                position: relative;
+                margin: auto;
+                right: 1.5px;
+                path {
+                    d: path($innerCloseIcon);
+                }
+            }
+        }
+    }
+}
+
+#browser {
+    .dateInputHour, .dateInputMinute {
+        &:hover, &:focus-visible {
+            border: none;
+        }
+    }
+    .dateInputAmPm[type=text][data-type=meridiem] {
+        border: 1px solid transparent !important;
+        top: 0px;
+        position: relative;
+        height: 26px;
+    }
+}
+
+
+.button-popup {
+    background-color: var(--colorBg);
+    h2 {
+        border: unset !important;
+    }
+}
+
+
+.account-dialog {
+    background-color: var(--colorBg);
+    header {
+        border: 1px solid transparent;
+        @include button(var(--colorBg), var(--colorBg), 3px);
+    }
+    .popup-scrollarea {
+        .account-item {
+            @include button(var(--colorBg), var(--colorBg), 3px);
+        }
+    }
+}
+
+.reading-list-dialog {
+    background-color: var(--colorBg);
+    .readinglist-item-large {
+        border: 1px solid transparent;
+        @include button(var(--colorBg), var(--colorBg), 3px);
+        height: 43px;
+    }
+}
+
+
+.SearchField nav.menu > ul {
+    background-color: var(--colorBg);
+    border: 1px solid $colorSearchBdr;
+    li {
+        &:hover {
+            border: 1px solid #3daae9;
+            border-radius: 3px;
+            background-color: $colorBtnActiveHvrBg;
+        }
+    }
+}
+
+hr {
+    border: 0.5px solid $colorBdrSettingsSidebar !important;
+}
+
+.webpanel-header {
+    box-shadow: unset !important;
+}

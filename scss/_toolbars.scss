@@ -83,14 +83,34 @@ button[name=PanelBookmarks], button[name=PanelHistory], button[name=PanelNotes] 
 }
 
 .sortselector-compact {
+    border: unset !important;
+    background: inherit !important;
     margin-bottom: 13px !important;
     height: 30px;
     padding-right: 0px;
     .sortselector-area {
+        border-top-right-radius: 3px !important;
+        border-bottom-right-radius: 3px !important;
         height: 30px;
+        position: relative;
+        z-index: 0;
+        .sortselector-dropdown {
+            border-top-right-radius: 3px !important;
+            border-bottom-right-radius: 3px !important;
+        }
     }
     .sortselector-button {
+        @include button(var(--colorAccentBg), var(--colorAccentBg), 3px);
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
         padding: 14px 18px !important;
+        border: 1px solid $colorInputBtnBdr !important;
+        left: -4px;
+        position: relative;
+        z-index: 1;
+        svg path {
+            d: path($upArrowIcon11x6);
+        }
     }
 }
 
@@ -114,7 +134,9 @@ footer {
 .button-popup {
     max-height: fit-content;
     box-shadow: 0 0 0 1px $colorSearchBdr, 0 2px 6px rgba(0, 0, 0, 0.25);
-
+    //box-shadow: 0 0 0 1px var(--colorBg), 0 2px 6px rgba(0, 0, 0, 0.25);
+    //top: 85px !important;
+    border-radius: 3px;
     &.download-popout {
         height: 500px !important;
     }
@@ -128,10 +150,19 @@ footer {
             }
         }
     }
+    &:before {
+        top: unset;
+        border: 0px;
+    }
 }
 
 .panel {
+    border-radius: 3px;
+    background-color: var(--colorBg);
+    .toolbar.toolbar-default {
+    }
     .SlideBar--FullWidth.alternate {
+        top: 3px;
         border-color: $colorBdrSettingsSidebar !important;
         &:hover {
             border-color: var(--colorHighlightBg) !important;
@@ -147,3 +178,59 @@ footer {
     }
 }
 
+.DownloadItem-ProgressBar.visible {
+    border: 1px solid #5C5E62 !important;
+    background-color: #3F4246 !important;
+    border-radius: 12px !important;
+    box-shadow: unset !important;
+    background-image: none !important;
+    height: 6px !important;
+    position: relative !important;
+    z-index: 0 !important;
+    overflow: unset !important;
+    .value {
+        top: -1px !important;
+        left: -1px !important;
+        border: 1px solid var(--colorHighlightBg) !important;
+        outline-radius: 12px !important;
+        box-shadow: unset !important;
+        background-image: none !important;
+        background-color: $colorRangeBdrSwitchOnBg !important;
+        height: 6px !important;
+        position: relative !important;
+        z-index: 1 !important;
+        &:disabled {
+            border-color: $colorItemInactive !important;
+            background-color: #243B48 !important;
+            opacity: 1 !important;
+        }
+    }
+}
+
+.readinglist-listing-large .ActionButton, .vivaldi-tree .tree-row .ActionButton {
+    &:hover {
+        background-color: unset;
+    }
+}
+
+.dialog-content {
+    background: var(--colorBg);
+    .button-toolbar.BookmarkLocationSelector-AddFolderButton {
+        button[name=bookmarkNewFolderButton][title="New Folder"] {
+            border: 1px solid $colorInputBtnBdr;
+            @include button(var(--colorTabBar), var(--colorTabBar), 3px);
+        }
+    }
+}
+.dialog-footer {
+    height: 52.8px !important;
+}
+
+.button-textonly.UrlBar-SearchField.iconmenu-container.SearchField.below {
+    @include search-field;
+}
+
+/*.menu {
+    background-image: none !important;
+    background-color: var(--colorBg) !important;
+}*/
